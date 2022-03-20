@@ -1,0 +1,134 @@
+/* 푸터 공통 */
+footer{
+    font-size: 14px;
+}
+footer h4{
+    font-weight: 500;
+}
+
+/* notice_area */
+.notice_area{
+    border-bottom: 1px solid #b1b1b1;
+    padding: 6px 0;
+    position: relative;
+
+}
+.notice_area .inner > div:nth-child(1){
+    float: left;
+}
+.notice_area .inner > div:nth-child(2){
+    float: right;
+    transform: translateX(-24px);
+}
+.notice_area h4{
+    display: inline-block;
+    margin-right: 40px;
+    
+}
+.notice_area .notice{
+    margin-right: 10px;
+}
+.notice_area .notice:hover{
+    border-bottom: 1px solid #0b1117;
+}
+.notice_area h4:nth-child(4){
+    margin-left: 230px;
+}
+.notice_area .blind{
+    width: 21px;
+    height: 21px;
+    background: url(../img/viewmore.png) no-repeat 0 ;
+    display: inline-block;
+    vertical-align: middle;
+}
+.notice_area .search{
+    float: right;
+    height: 24px;
+}
+.notice_area .search a{
+    height: 24px;
+    width: 24px;
+    background-size: 24px;
+}
+
+
+
+/* aside_area */
+.aside_area{
+    text-align: center;
+    padding: 30px 200px;
+
+}
+footer .aside_area h4{
+    display: block;
+    margin: 0 0 10px 0;
+}
+.aside_area ul{
+    float: left;
+    width: 25%;
+}
+.aside_area ul li{
+    padding: 5px 0;
+}
+
+
+
+/* list_crop */
+footer .list_crop{
+    background: #4f2987;
+}
+footer .list_crop li a{
+    float: left;
+    font-size: 14px;
+    color: #fff8ff;
+    font-weight: 300; 
+    padding: 10px 17px 10px 0;
+}
+footer .list_crop li:last-child a{
+    float: right;
+    background: url(../img/about_arrow.png) no-repeat right;
+}
+
+/* addr */
+.addr{
+    padding: 40px 0;
+}
+.addr address{
+    position: relative;
+}
+.addr h3{
+    height: 117px;
+    width: 150px;
+    background: url(../img/footer_logo.png) no-repeat;
+    display: inline-block;
+}
+.addr h3 a{
+    display: block;
+    height: 100%;
+}
+.addr p:nth-last-child(3){
+    white-space: pre;
+    display: block;
+    position: absolute;
+    top: -32px;
+    left: 8%;
+}
+.addr p:nth-last-child(2){
+    float: right;
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-right: 20px;
+}
+.addr p:nth-last-child(2) span{
+    font-size: 14px;
+}
+.addr div:nth-last-child(1){
+    background: url(../img/footer_img.jpg) no-repeat;
+    width: 236px;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+}

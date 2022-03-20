@@ -1,0 +1,153 @@
+/*공통*/
+@import
+url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+.inner{
+    max-width: 1276px;
+    width: calc(100% - 36px);
+    margin: 0 auto;
+}
+
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/*호버 시 변경되는 스타일 font=14px인 경우*/
+.change a:hover{
+    color: #4f2987;
+    font-size: 14px;
+    font-weight: 700;
+}
+/*책 제목 medium*/
+.book_title{
+    font-weight: 500;
+    line-height: 1.6;
+    color: #0b1117;
+    margin-top: 22px;
+    display: block;
+}
+/*책 서브 내용 light*/
+.book_sub{
+    font-size: 14px;
+    font-weight: 300; 
+    line-height: 1.5;
+    color: #0b1117;
+    margin-top: 7px;
+    display: block;
+    text-align: center;
+}
+/*컨텐츠 타이틀 bold*/
+.section_title{
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/*요소들 위쪾 여백*/
+section:not(#main_visual, #mv_btn){
+    margin-top: 80px;
+}
+/* h2 아래 여백 */
+section h2:not(#aladin_tv .section_title){
+    margin-bottom: 40px;
+}
+/*글씨 안보이게*/
+.blind{
+    text-indent: -9999px;
+    overflow: hidden;
+    font-size: 0;
+}
+/* 검색창 */
+.search{
+    position: relative;
+    float: left;
+}
+
+.search input{
+    border: 2px solid #4f2987;
+}
+
+.search a{
+    background: url(../img/search.jpg) no-repeat;
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    text-indent: -999px;
+    overflow: hidden;
+    font-size: 0;
+}
+/*더보기 버튼*/
+.viewmore{
+    border: 1px solid #65c3d3;
+    width: 68px;
+    height: 25px;
+    text-align: center;
+    line-height: 23px;
+}
+
+.viewmore:hover{
+    background: #65c3d3;
+    color: #fff8ff;
+}
+
+/*순위표시*/
+.com_rank{
+    position: absolute;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 44px;
+    height: 44px;
+}
+
+.rank1{
+    background: url(../img/rank01.png) no-repeat;
+    
+
+}
+.rank2{
+    background: url(../img/rank02.png) no-repeat;
+    position: absolute;
+
+}
+.rank3{
+    background: url(../img/rank03.png) no-repeat;
+    position: absolute;
+
+}
+
+
+/*페이지 이동  화살표 버튼 변경 내용 */
+ .swiper-button-next, .swiper-button-prev{
+    width: 30px;
+    height: 55px;
+}
+.swiper-button-prev:after{
+    background: url(../img/book_news_left_arrow_active.png) no-repeat center / cover;
+    height: 100%;
+    width: 100%;
+}
+.swiper-button-next:after{
+    background: url(../img/book_news_rihgt_arrow_active.png) no-repeat center / cover;
+    height: 100%;
+    width: 100%;
+}
+.news_contents .swiper-button-prev:after, #recom_book .swiper-button-prev:after {
+    font-size: 0;
+}
+.news_contents .swiper-button-next:after, #recom_book .swiper-button-next:after{
+    font-size: 0;
+
+}
+/* 구분선 */
+.divide{
+    margin-top: 80px;
+    width: 100%;
+    height: 10px;
+    background: #7d7d7d;
+    opacity: 0.3;
+    font-size: 0;
+    text-indent: -999px;
+    overflow: hidden;
+}
+

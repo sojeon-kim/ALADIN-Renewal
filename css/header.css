@@ -1,0 +1,137 @@
+/*헤더*/
+header{
+    border-bottom: 1px solid #4f2987;
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 135px;
+    z-index: 9999;
+    position: relative;
+}
+header .inner{
+    height: 100%;
+    position: relative;
+}
+.topside_wrap{
+    padding-top: 17px;
+    position: relative;
+}
+.topside_wrap h1{
+    float: left;
+    margin-top: 13px;
+}
+.topside_wrap h1 a{
+    display: block;
+}
+
+.topside_wrap .search{
+    margin: 26px 0 0 128px;
+}
+
+.topside_wrap .search input{
+    width: 515px;
+    height: 40px;
+    font-size: 18px;
+    text-indent: 17px;
+}
+.topside_wrap .search input::placeholder{
+    color: #c9c3c9;
+}
+
+.top_menu{
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+
+}
+.top_menu li{
+    display: block;
+    float: left;
+    margin-right: 30px;
+}
+.top_menu li:last-child{
+    margin-right: 0;
+}
+.top_menu li a{
+    font-size: 14px;
+    font-weight: 400;
+}
+.top_menu li a:hover{
+    border-bottom: 1px solid #0b1117;
+}
+.hamburger_btn span{
+    display: none;
+}
+
+/*nav 태크*/
+nav{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    /* 아래 두줄은 nav를 header바닥 맞추기 위해 사용 */
+    /* position: absolute;
+    bottom: 0; */
+    margin-top: 13px;
+}
+nav .main_manu{
+    height: 100%;
+    display: block;
+}
+nav .main_manu > li{
+    font-weight: 700;
+    float: left;/*옆으로 나란히 나란히~*/
+    width: auto !important;
+    position: static;
+}
+nav .main_manu > li:nth-last-child(1), nav .main_manu > li:nth-last-child(2), nav .main_manu > li:nth-last-child(3){
+    float: right;
+}
+nav .main_manu > li:hover{
+    background: #4f2987 url(../img/menu_arrow.png) no-repeat center 100%;
+}
+nav .main_manu > li> a{
+    padding: 0 16px;
+}
+nav .main_manu > li:hover > a{
+    color: #fff8ff;
+}
+
+nav .main_manu > li:hover .sub_menu{
+    display: block;
+}
+nav .sub_menu{
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #4f2987;
+}
+nav .sub_menu .sec_depth{
+    float: left;
+    text-align: center;
+    width: auto;
+    margin: 0 5px;
+    font-weight: 500;
+}
+nav .sub_menu .sec_depth h4{
+    border-bottom: 1px solid #4f2987;
+    color: #4f2987;
+}
+nav .sub_menu .sec_depth h4, nav .sub_menu .sec_depth ul li{
+    padding: 0 50px;
+    font-size: 14px;
+}
+nav .sub_menu .sec_depth ul li:hover a{
+    border-bottom: 2px solid #0b1117;
+}
+nav .menu_flex{
+    max-height: 612px;
+    width: 840px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+nav .menu_flex .sec_depth{
+    height: 50%;
+}
+nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
+    height: 100%;
+}

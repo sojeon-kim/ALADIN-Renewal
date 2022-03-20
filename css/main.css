@@ -1,0 +1,459 @@
+/* *
+{
+    border: 1px solid cadetblue !important;
+} */
+
+/*메인 비주얼*/
+#main_visual{
+    text-align: center;
+}
+#main_visual > .inner{
+    position: relative;
+}
+#main_visual .mv{
+    padding: 46px 0;
+}
+#main_visual .mv a{
+    display: block;
+    position: relative;
+}
+#main_visual .mv a img{
+    max-width: 100%;
+}
+#main_visual .swiper-pagination-bullet{
+    border: 1px solid #4f2987;
+    background: initial;
+    opacity: 1;
+}
+#main_visual .swiper-pagination-bullet-active{
+    background: #4f2987;
+}
+#main_visual swiper-scrollbar{
+    display: none;
+}
+
+/*사은품*/
+#main_visual .mv> li .gift{
+    position: absolute;
+    top: 50%;
+    left: 57%;
+}
+#main_visual .mv> li .gift span{
+    display: block;
+    color:#0b1117;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    background: #ffe016;
+    border-radius: 25px;
+    padding: 5px 20px;
+    z-index: 999;
+    position: relative;
+}
+
+#main_visual .mv>li .gift .gift_img{
+    border: 3px solid #ffe016;
+    background: #fff;
+    box-shadow: 1px 1px 6px;
+    padding: 4px 26px 0;
+    margin-top: -5px;
+}
+
+/*메인 비주얼 하단 버튼*/
+#mv_btn{
+    height: 34px;
+}
+#mv_btn div{
+    height: 100%;
+    position: relative;
+}
+#mv_btn ul{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* overflow: hidden; */
+    /* margin-top: -2px; */
+    padding: 0 2px;
+}
+#mv_btn ul::before, #mv_btn ul::after{
+    content: '';
+    display: block;
+    position: absolute;
+    /* border: 1px solid #4f2987; */
+    height: 2px;
+    background: #4f2987;
+}
+#mv_btn ul::before{
+    width: calc(50% - 271px); /*550에서 -8(-2를 4번한 값)의 반인 271px*/
+    left: 0;
+}
+#mv_btn ul::after{
+    width: calc(50% - 269px); /*#mv_btn ul li에서 margin-left: -2px;한 만큼 after에서 -2만큼 더 빼주어야 함*/
+    right: 0;
+}
+/* 하단 버튼 위에 튀어나온 부분 안보이게 하는 코드*/
+#mv_btn ul li{
+    width: 110px;
+    height: 28px;
+    border: 2px solid #4f2987;
+    border-radius: 0 0 10px 10px;
+    float: left;
+    text-align: center;
+    line-height: 24px;
+    margin-left: -2px;
+}
+#mv_btn ul li.active{
+    font-weight: 700;
+    height: auto;
+    line-height: 30px;
+    border-top: #fff;
+    /* margin-top: -3px; */
+    /* z-index: 999; */
+    position: relative;
+
+}
+
+/*쿠폰*/
+#coupon .inner a{
+    display: inline-block;
+    width: calc(33.333% - 50px/3);
+    height: 60px;
+    background: #f5f6cd;
+    border-radius: 16px 0 16px 0;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#coupon .inner a:last-child{
+    margin-right: 0;
+}
+#coupon .inner a img{
+    margin-bottom: 9px;
+}
+
+#coupon .inner a p{
+    display: inline-block;
+    line-height: 60px;
+    margin-left: 15px;
+}
+#coupon .inner a p br{
+    display: none;
+}
+
+/*화제의 책 소식*/
+#book_news{
+    position: relative;
+}
+#book_news h2{
+    padding-left: 86px;
+}
+#book_news .swiper-slide{
+    padding: 0 5vw;
+    opacity: 0.2;
+}
+#book_news .swiper-slide-active{
+    opacity: 1;
+}
+#book_news a{
+    display: block;
+}
+#book_news .txt{
+    float: left;
+    width: 50%;
+}
+#book_news img{
+    float: right;
+    width: 50%;
+}
+
+#book_news .txt p:first-child{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4; /*1.36 반올림*/
+    padding-top: 47px;
+}
+#book_news .txt p:last-child{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7; /*1.66 반올림*/
+    padding-top: 37px;
+}
+#book_news .news_contents{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* transform: translateX(-50%); */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/*추천 책*/
+#recom_book h2{
+    margin-left: 50px;
+}
+#recom_book .swiper_wrap{
+    position: relative;
+}
+#recom_book .swiper{
+    margin: 0 50px;
+}
+#recom_book .swiper-slide{
+    display: block;
+    height: 242px;
+    border: 1px solid #4f2987;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#recom_book .swiper-slide:last-child{
+    margin-right: 0;
+}
+#recom_book .swiper-slide a{
+    display: block;
+}
+
+#recom_book .swiper-slide img{
+    margin-top: 19px;
+}
+
+#recom_book .swiper-slide span{
+    font-weight: 400;
+}
+#recom_book .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: -30px;
+}
+#recom_book .swiper-pagination-bullet{
+    border: 1px solid #4f2987;
+    background: initial;
+    opacity: 1;
+}
+#recom_book .swiper-pagination-bullet-active{
+    background: #4f2987;
+}
+/*top10*/
+/*상단 카테고리 버튼*/
+.btn_wrap{
+    margin-bottom: 25px;
+}
+
+.btn_wrap #category{
+    float: left;
+}
+
+.btn_wrap .viewmore{
+    float: right;
+}
+
+.btn_wrap #category a{
+    position: relative;
+    margin: 0 5px;
+    color: #7d7d7d;
+}
+
+.btn_wrap #category a::after{
+    content: "";
+    display: inline-block;
+    background: #7d7d7d;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    top: 11px;
+    right: -10px;
+}
+
+.btn_wrap #category a:last-child::after{
+    display: none;
+}
+
+.btn_wrap #category a.active, .btn_wrap #category a:hover{
+    color: #4f2987;
+    font-weight: 500;
+}
+
+/*책 순위*/
+#top10 .inner{
+    padding-left: 50px;
+}
+#top10 .top1to10{
+    width: 100%;
+}
+.top1to10 li{
+    /* !!반응형으로 너비를 줄이고 싶으면 with가 들어가야함, img에도 너비 %를 주어야 함!! */
+    float: left;
+    width: calc(20% - 296px/5);
+    margin-right: 70px;
+    text-align: center;
+}
+.top1to10 li:nth-child(5),.top1to10 li:nth-child(10){
+    margin-right: 0;
+}
+.top1to10 li a{
+    display: block;
+}
+.top1to10 li a img{
+    width: 100%;
+}
+.top1to10 li a .book_title{
+    height: 30px; /*최선의 방법인가?*/
+}
+.top1to10 li:nth-child(-n+5) a span{
+    margin-bottom: 40px;
+    /*-n+6 : 1번째에서 부터 5번째 까지 n자리엔 0부터 들어감*/
+}
+
+
+/*알라디너TV*/
+.aladin_tv_title{
+    margin-bottom: 40px;
+}
+.aladin_tv_title .section_title{
+    float: left;
+}
+
+.aladin_tv_title .viewmore{
+    float: right;
+    transform: translateY(10px);
+}
+.aladin_tv_contents div{
+    float: left;
+    width: calc(50% - 15px/2);
+}
+
+.aladin_tv_contents div:first-child{
+    margin-right:15px
+}
+.aladin_tv_contents div h5{
+    padding-bottom: 20px;
+}
+.aladin_tv_contents h5 span{
+    color: red;
+}
+
+.aladin_tv_contents a img{
+    width: 100%;
+}
+
+/*youtube 플레이 아이콘*/
+.aladin_tv_contents a{
+    display: block;
+    position: relative; /*유튜브 아이콘 위치 지정을 위한 코딩*/
+
+}
+.aladin_tv_contents a::before{
+    content: "";
+    background: url(../img/youtube_btn.png) no-repeat;
+    opacity: 0.8;
+    width: 90px;
+    height: 63px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*1월의 알라딘*/
+#event{
+    border-bottom: 1px solid #b1b1b1;
+
+}
+#event h2 span{
+    color: #4f2987;
+}
+#event h2 span:first-child{
+    font-size: 40px;
+}
+.month_event{
+    flex-wrap: wrap;
+}
+
+.month_event li{
+    text-align: center;
+    width: calc(25% - 60px/4);
+    height: 60px;
+    margin-right: 15px;
+    position: relative;
+    float: left;
+    line-height: 60px;
+    margin-bottom:40px;
+    border-radius: 16px 0 16px 0;
+}
+.month_event li:nth-child(4n){
+    margin-right: 0;
+}
+.month_event li:nth-child(1) {
+    background: url(../img/event01.png) no-repeat center;
+}
+.month_event li:nth-child(2){
+    background: url(../img/event02.png) no-repeat  -17px -103px;
+}
+.month_event li:nth-child(3){
+    background: url(../img/event03.png) no-repeat center;
+}
+.month_event li:nth-child(4){
+    background: url(../img/event04.png) no-repeat center;
+}
+.month_event li:nth-child(5){
+    background: url(../img/event05.png) no-repeat center;
+}
+.month_event li:nth-child(6){
+    background: url(../img/event06.png) no-repeat center;
+}
+.month_event li:nth-child(7){
+    background: url(../img/event07.png) no-repeat  -13px -102px;
+}
+.month_event li:nth-child(8){
+    background: url(../img/event08.png) no-repeat center;
+}
+.month_event li a{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.6);
+    border-radius: 16px 0 16px 0;
+    left: 0;
+    top: 0;
+}
+.month_event li span{
+    color: #fff8ff;
+}
+.month_event li span br{
+    display: none;
+}
+
+/* 퀵메뉴 */
+.quickmenu{
+    right: 2%;
+    top: 20%;
+    position: fixed;
+    z-index: 999;
+}
+.quickmenu .top, .quickmenu .down{
+    width: 60px;
+    height: 50px;
+    display: block;
+    margin-bottom: 5px;
+}
+.quickmenu .top{
+    background: url(../img/quickmenu_top.png) rgba(216, 216, 216) no-repeat center;
+}
+.quickmenu .down{
+    background: url(../img/quickmenu_down.png) rgba(216, 216, 216) no-repeat center;
+}
+.quickmenu .cart{
+    display: block;
+    background: url(../img/cart.png) no-repeat center;
+    width: 62px;
+    height: 68px;
+}
+.quickmenu .cart+ ol{
+    width: 363px;
+    height: 72px;
+    background: #65c3d3;
+    position: absolute;
+    bottom:-5px;
+    right: 75px;
+}
