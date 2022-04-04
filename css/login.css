@@ -1,0 +1,118 @@
+.login_inner{
+    max-width: 376px;
+    width: calc(100% - 36px);
+    margin: 0 auto;
+}
+#login h4{
+    background: url(../img/img-index/logo.png) no-repeat;
+    background-size: 199px 49px;
+    width: 199px;
+    height: 49px;
+    margin: 67px auto 36px;
+
+}
+#login input{
+    width: 100%;
+    border: 1px solid #4f2987;
+    height: 47px;
+    text-indent: 13px;
+}
+#login input:first-child{
+    border-bottom: 0;
+    border-radius: 10px 10px 0 0 ;
+}
+#login input:nth-child(2){
+    border-radius: 0 0 10px 10px;
+}
+#login input::placeholder{
+    text-indent: 13px;
+    color: #c9c3c9;
+    font-size: 18px;
+}
+#login a{
+    display: block;
+    background: url(../img/img-login/check_icon.png) no-repeat;
+    background-position: 0 2px;
+    text-indent: 22px;
+    color: #d8d8d8;
+    font-size: 14px;
+    margin: 8px 0;
+}
+#login input:last-child{
+    width: 100%;
+    height: 50px;
+    color: #fff8ff;
+    background: #4f2987;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/* 아이콘 로그인 */
+#join h4{
+    font-size: 20px;
+}
+.icon_wrap h4{
+    margin: 26px auto;
+    text-align: center;
+}
+.icon {
+    display: flex;
+    flex-wrap: wrap;
+}
+.icon li{
+    width: 33.333%;
+    margin-bottom: 47px;
+}
+.icon li:nth-child(3n){
+    margin-right: 0;
+}
+.icon a{
+    display: block;
+    text-align: center;
+}
+.icon a img{
+    display: block;
+    margin: 0 auto 15px;
+}
+/* 아이디,비밀번호 찾기, 회원가입 */
+#serch_personal_data{
+    text-align: center;
+}
+#serch_personal_data a{
+    position: relative;
+    margin-right:50px;
+}
+#serch_personal_data a:last-child{
+    margin-right: 0;
+}
+#serch_personal_data a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: -25px;
+    top: 5px;
+    width: 1px;
+    height: 16px;
+    background: #0b1117;
+}
+#serch_personal_data a:last-child::after{
+    display: none;
+}
+
+/* 665px */
+@media screen and (max-width: 665px){
+    .icon a{
+        font-size: 14px;
+    }
+    .icon a img{
+        width: 50px;
+    }
+    #serch_personal_data a{
+        margin-right:5px;
+    }
+    #serch_personal_data a::after{
+        right: -7px;
+    }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알라딘 회원가입</title>
+    <script src="js/js_jq/jquery-3.3.1.min.js"></script>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/join_from.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <script src="js/direct.js"></script>
+</head>
+<body>
+    <div class="join_from_inner">
+        <section id="terms">
+            <h4>약관동의</h4>
+            <a href="#" class="check_list checked">모든 약관에 동의합니다.</a>
+            <a href="#">필수 동의항목<span class="showContents">내용보기</span></a>
+            <a href="#">알라딘 이용약관<span class="showContents">내용보기</span></a>
+            <a href="#">개인정보 수집 및 이용<span class="showContents">내용보기</span></a>
+        </section>
+        <section>
+            <h4>선택 동의항목</h4>
+            <p>*이벤트 적립금, 쿠폰 등의 이벤트 혜택을 드리는 마케팅 정보를 수신할 채널을 선택해 주세요.<br>
+                (미선택시 혜택에서 제외될 수 있습니다.)<br>
+                모든 채널 수신동의하시면 즉시 사용가능 적립금 1천원</p>
+            <a href="#" class="check_list">선택적 개인정보수집 및 이용 동의</a>
+            <a href="#" class="check_list">앱 푸시</a>
+            <a href="#" class="check_list">문자/카카오톡</a>
+            <a href="#" class="check_list">메일</a>
+            <a href="#" class="check_list">관심 분야별 맞춤 뉴스레터 수신</a>
+
+        </section>
+        <section id="form">
+            <h4>기본정보 입력</h4>
+            <form>
+                <div>
+                    <label for ="user_name">이름</label>
+                    <input type="text" name="user_name" id="user_name">
+                </div>
+                <div>
+                    <label for ="id">아이디</label>
+                    <input type="text" name="id" id="id">
+                    <button type="button">중복확인</button>
+                </div>
+                <div>
+                    <label for ="pw">비밀번호</label>
+                    <input type="text" name="pw" id="pw">
+                </div>
+                <div>
+                    <label for ="pw_re">비밀번호 재입력</label>
+                    <input type="text" name="pw_re" id="pw_re">
+                </div>
+                <p class="data_none ">비밀번호를 잘못 입력하셨습니다.</p>
+                <div>
+                    <label  class="choice_label" for ="email">이메일(선택)</label>
+                    <input type="text" name="email" id="email">
+                    @
+                    <select name="email" id="selecter">
+                        <option value="">==선택==</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="direct">직접입력</option>
+                    </select>
+                    <input type="text" name="slect_direct" id="slect_direct">
+                </div>
+                <div>
+                    <label for ="cell_phone">휴대전화</label>
+                    <input type="text" name="cell_phone" id="cell_phone">
+                    <button type="button">인증번호 받기</button>
+                    <input type="text" name="certification" id="certification" placeholder="인증번호를 입력하세요.">
+                </div>
+                <div>
+                    <label  class="choice_label" for ="address1">주소(선택)</label>
+                    <input type="text" name="address" id="address1">
+                    <button type="button">주소검색</button>
+                    <input type="text" name="address" id="address2">
+                    <input type="text" name="address" id="address3">
+                </div>
+                <p>*는 필수 입력 사항입니다.</p>
+            </form>
+            <div class="blind">구분선</div>
+            <input id= "submit" type="submit" value="가입하기">
+        </section>
+    </div>
+    <footer>
+        <div class="notice_area"> 
+            <!--구분선을 위한 div-->
+            <div class="inner clear">
+                <div>
+                    <h4>공지사항</h4>
+                    <a href="#" class="notice">우채국택배 접수 중지로 인한 배송 및 주문 불가상안내 </a>
+                    <a href="#" class="blind">더보기</a>
+                </div>
+                <div>
+                    <h4>통합검색</h4>
+                    <div class="search">
+                        <input type="text">  
+                        <a href="#">검색</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터 메뉴 -->
+        <div class="inner aside_area_wrap">
+            <div class="aside_area clear">
+                <div>
+                    <h4>출판사 & 판매자 안내</h4>
+                    <ul>
+                        <li><a href="#">제휴 & 마케팅 안내</a></li>
+                        <li><a href="#">출판사/공급사 안내</a></li>
+                        <li><a href="#">광고 안내</a></li>
+                        <li><a href="#">판매자 매니저</a></li>
+                        <li><a href="#">학교/기업/기관 대량구매</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>빠른 서비스</h4>
+                    <ul>
+                        <li><a href="#">반품/교환 신청</a></li>
+                        <li><a href="#">증빙서류 신청</a></li>
+                        <li><a href="#">미배송 신고</a></li>
+                        <li><a href="#">입금신고</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>알라딘 소식</h4>
+                    <ul>
+                        <li><a href="#">알라딘 북플</a></li>
+                        <li><a href="#">알라딘 서재</a></li>
+                        <li><a href="#">알라딘 트위터</a></li>
+                        <li><a href="#">알라딘 페이스북</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>웹 & 모바일</h4>
+                    <ul>
+                        <li><a href="#">Open API</a></li>
+                        <li><a href="#">TTB</a></li>
+                        <li><a href="#">모바일/앱</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="list_crop">
+            <ul class="inner clear">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">청소년보호정책</a></li>
+                <li><a href="#">제휴</a></li>
+                <li><a href="#">제안</a></li>
+                <li><a href="#">광고 안내</a></li>
+                <li><a href="#">대량구매</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">About 알라딘</a></li>
+            </ul>
+        </div>
+        <!-- addr -->
+        <div class="inner addr">
+            <h3 class="blind footer_logo"><a href="#">푸터 로고</a></h3>
+            <address class="clear">
+                <p>(주)알라딘커뮤니케이션<br>
+                    대표이사 : 최우경<br>                                           
+                    FAX : 02-6913-2500<br>                                       
+                    사업자등록 : 201-81-23094<br>                           
+                    호스팅 제공자 : 알라딘커뮤니케이션<br>
+                    (본사)서울시 중구 서소문로 89-31 지도<br>
+                    (고객센터) 서울시 마포구 백범로 71 숨도빌딩 7층 ,<br class="ent"> FAX : 02-6926-2600
+                </p>
+                <p>
+                    고객정보보호 책입자 : 최우경<br>
+                    E-mail : privacy@aladin.co.kr<br>
+                    통신판매업신고 : 중고01520호
+                </p>
+                <p>1544-2514<br>
+                    <span>고객센터 일반문의(발신자 부담)</span>
+                </p>
+                <div class="blind">서비스가입확인 인증</div>
+            </address>
+        </div>
+    </footer>
+</body>
+</html>

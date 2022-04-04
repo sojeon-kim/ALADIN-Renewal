@@ -4,21 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>알라딘</title>
-    <!--css링크-->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/js_jq/jquery-3.3.1.min.js"></script>
+    <title>회원가입</title>
 
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">  
+    <link href="css/join.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
-
+    
 </head>
 <body>
     <!--헤더-->
@@ -314,378 +307,74 @@
             </nav>
         </div>
     </header>
-    <!--메인 비주얼-->
-    <section id="main_visual">
-        <div class="inner mv_list">
-            <div class="swiper mySwiper">
-                <ul class="clear mv swiper-wrapper">
-                    <li class="swiper-slide">
+    <section id="join" class="clear">
+        <div class="icon_wrap">
+            <h4>SNS계정으로 가입하기</h4>
+            <ul class="icon">
+                <li>
+                    <a href="#">
+                        <img src="img/img-join/naver.png" alt="네이버 계정 로그인 아이콘">
+                        네이버
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/img-join/kakao.png" alt="카카오톡 계정 로그인 아이콘">
+                        카카오톡
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <img src="img/img-join/google.png" alt="구글 계정 로그인 아이콘">
+                    구글
+                </a>
+                </li>
+                    <li>
                         <a href="#">
-                            <img src="img/img-index/main01.jpg" alt="위스키 잡지">
-                            <!--사은품-->
-                            <div class="gift">
-                                <span>사은품</span>
-                                <div class="gift_img">
-                                    <img src="img/img-index/gift.png" alt="사은품 우드향 향수">
-                                </div>
-                            </div>
-                            <span class="book_title">WHISKY</span>
-                            <P class="book_sub">위에 추억과 라이너 어머니</P>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
+                        <img src="img/img-join/twitter.png" alt="트위터 계정 로그인 아이콘">
+                        트위터
+                    </a>
+                </li>
+                    <li>
                         <a href="#">
-                            <img src="img/img-index/main02.jpg" alt="공대에 가고 싶어졌습니다">
-                            <span class="book_title">공대에 가고 싶어졌습니다</span>
-                            <P class="book_sub">노새, 것은 패, 듯합니다 나는 나는 아직 보고,</P>
-                        </a>
-                    </li>  
-                    <li class="swiper-slide">
+                        <img src="img/img-join/samsungpass.png" alt="삼성패스 계정 로그인 아이콘">
+                        삼성pass
+                    </a>
+                </li>
+                    <li>
                         <a href="#">
-                            <img src="img/img-index/main03.jpg" alt="정보처리산업기사 필기">
-                            <span class="book_title">정보처리산업기사 필기</span>
-                            <P class="book_sub">유소년에게서 피가 있는 끝까지 같이</P>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#">
-                            <img src="img/img-index/main04.jpg" alt="자전거 생활 잡지">
-                            <span class="book_title">자전거생활</span>
-                            <P class="book_sub">잠, 잔디가 겨울이 이름자 그리고 것은</P>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#">
-                            <img src="img/img-index/main01.jpg" alt="위스키 잡지">
-                            <!--사은품-->
-                            <div class="gift">
-                                <span>사은품</span>
-                                <div class="gift_img">
-                                    <img src="img/img-index/gift.png" alt="사은품 우드향 향수">
-                                </div>
-                            </div>
-                            <span class="book_title">WHISKY</span>
-                            <P class="book_sub">위에 추억과 라이너 어머니</P>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#">
-                            <img src="img/img-index/main02.jpg" alt="공대에 가고 싶어졌습니다">
-                            <span class="book_title">공대에 가고 싶어졌습니다</span>
-                            <P class="book_sub">노새, 것은 패, 듯합니다 나는 나는 아직 보고,</P>
-                        </a>
-                    </li>  
-                    <li class="swiper-slide">
-                        <a href="#">
-                            <img src="img/img-index/main03.jpg" alt="정보처리산업기사 필기">
-                            <span class="book_title">정보처리산업기사 필기</span>
-                            <P class="book_sub">유소년에게서 피가 있는 끝까지 같이</P>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#">
-                            <img src="img/img-index/main04.jpg" alt="자전거 생활 잡지">
-                            <span class="book_title">자전거생활</span>
-                            <P class="book_sub">잠, 잔디가 겨울이 이름자 그리고 것은</P>
-                        </a>
-                    </li>
-                </ul>
-                <div class="swiper-pagination"></div>
-            </div>
+                        <img src="img/img-join/apple.png" alt="애플 계정 로그인 아이콘">
+                        애플
+                    </a>
+                </li>
+            </ul>
         </div>
-        <!--메인 비주얼 하단 버튼-->
-        <section  id="mv_btn">
-            <div class="clear"> <!--inner-->
-                <div class="swiper mySwiper">
-                    <ul class="swiper-wrapper">
-                        <li class="active swiper-slide"><a href="#">신간소개</a></li>
-                        <li class="swiper-slide"><a href="#">E-BOOK</a></li>
-                        <li class="swiper-slide"><a href="#">편집장 PICK</a></li>
-                        <li class="swiper-slide"><a href="#">이벤트 도서</a></li>
-                        <li class="swiper-slide"><a href="#">이벤트 굿즈</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </section>
-    <!--쿠폰-->
-    <section id="coupon">
-        <div class="clear inner">
-            <a href="#">
-                <img src="img/img-index/but_01.png" alt="하루단한번 쿠폰 바로가기 버튼">
-                <p>하루단한번 쿠폰</p>
-            </a>
-            <a href="#">
-                <img src="img/img-index/but_02.png" alt="선착순 대한민국 최저가 바로가기 버튼">
-                <p>선착순<br> 대한민국 최저가</p>
-            </a>
-            <a href="#">
-                <img src="img/img-index/but_03.png" alt="세상의 모든 중고 알라딘 마켓 바로가기 버튼">
-                <p>세상의 모든 중고<br> 알라딘마켓 OPEN</p>
-            </a>
+        <div class="benefits_wrap">
+            <h4>알라딘 회원으로 가입하기</h4>
+            <img src="img/img-join/join_icon.png" alt = "알라딘 회원가입 혜택 아이콘">
+            <span>알라딘 회원가입 혜택</span>
+            <ul class="clear benefits">
+                <li>알라딘 앱<br>
+                    적립금 2,000</li>
+                <li>알라딘마켓 앱<br>
+                    적립금 2,000</li>
+                <li>전자책 뷰어앱<br>
+                    적립금 1,000</li>
+                <li>퀴즈참여<br>
+                    적립금 1,000</li>
+            </ul>
+            <ul class="user_select">
+                <li><a href="join_from.html"><span>일반 개인 회원<br>
+                    (만 14세 이상)</span></a></li>
+                <li><a href="#"><span>만 14세 미만<br>
+                    어린이 회원</span></a></li>
+                <li><a href="#"><span>법인/단체<br>
+                    (학교, 기업, 기관)</span></a></li>
+                <li><a href="#"><span>Resident<br>Abroad</span></a></li>
+            </ul>
         </div>
     </section>
-    <!--화제의 책 소식-->
-    <section id="book_news">
-        <h2 class="section_title inner">화제의 책 소식</h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="clear">
-                        <div class="txt">
-                            <p>
-                                날카로우나 눈에 우리 넣는 수 칼이다.<br>
-                                없으면, 두손을 그것은 이것이다.
-                            </p>
-                            <p>노년에게서 하는 현저하게 이상은 못하다 것은<br>
-                                얼마나 얼음이 얼음과 이것이다.<br>
-                                무엇을 피고, 영원히 있는 돋고, 이것은 말이다.
-                            </p>
-                        </div>
-                        <img src="img/img-index/book_news_01.jpg" alt="화제의 책 이경희 소설 너의 다정한 우주로부터, 심너울 소설 우리가 오르지 못할 방주">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="clear">
-                        <div class="txt">
-                            <p>
-                                언덕 흙으로 우는 이웃 별 프랑시스 무엇인지<br>
-                                아무 까닭입니다. 써 헤는 이름을 자랑처럼<br>
-                                어머님, 아스라히 아직 별 까닭입니다.
-                            </p>
-                            <p>
-                                가을로 나는 내일 추억과 이런 하나의 이름자 소학교<br>
-                                이름과, 계십니다. 어머니 벌써 잠, 그러나 겨울이<br> 계십니다. 계집애들의 패, 프랑시스 있습니다.
-                            </p>
-                        </div>
-                        <img src="img/img-index/book_news_02.jpg" alt="화제의 책 이경희 소설 너의 다정한 우주로부터, 심너울 소설 우리가 오르지 못할 방주">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="clear">
-                        <div class="txt">
-                            <p>
-                                현 농업생산성의역을 면한 후가<br> 아니면국무총리로<br>
-                                임명될 군인은 수 없다. 제고와 농지의<br> 합리적인 이용을 위하거나
-                            </p>
-                            <p>
-                                대한민국의 국민이 되는 요건은 법률로<br> 정한다. 국가는 법률이 정하는 바에<br>
-                                의하여 재외국민을 보호할 의무를 진다.
-
-                            </p>
-                        </div>
-                        <img src="img/img-index/book_news_03.jpg" alt="화제의 책 이경희 소설 너의 다정한 우주로부터, 심너울 소설 우리가 오르지 못할 방주">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="inner news_contents">
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div> 
-    </section>
-    <!--추천 책-->
-    <section id="recom_book">
-        <div class="inner clear">
-            <h2 class="section_title">○○○님 이 책 어때요?</h2>
-            <div class="swiper_wrap">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#"><img src="img/img-index/recommended_book01.jpg" alt="와인">
-                            <span class="book_title">와인</span></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="img/img-index/recommended_book02.jpg" alt="불편한 편의점">
-                            <span class="book_title">불편한 편의점</span></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="img/img-index/recommended_book03.jpg" alt="부의 시나리오">
-                            <span class="book_title">부의 시나리오</span></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="img/img-index/recommended_book04.jpg" alt="기계설계산업기사 필기">
-                            <span class="book_title">기계설계산업기사 필기</span></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="img/img-index/recommended_book01.jpg" alt="와인">
-                            <span class="book_title">와인</span></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="img/img-index/recommended_book02.jpg" alt="불편한 편의점">
-                            <span class="book_title">불편한 편의점</span></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="img/img-index/recommended_book03.jpg" alt="부의 시나리오">
-                            <span class="book_title">부의 시나리오</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-    <!--top 10-->
-    <section id="top10">
-        <div class="inner">
-            <h2 class="section_title">주간 BEST TOP 10</h2>
-            <div class="btn_wrap clear">
-                <div id="category">
-                    <a href="#" class="active">종합도서</a>
-                    <a href="#">국외 도서</a>
-                    <a href="#">E-BOOK</a>
-                    <a href="#">오디오북</a>
-                </div>
-                <a href="#" class="viewmore"><span>더보기</span></a>
-            </div>
-            <ol class="top1to10 clear">
-                <li>
-                    <a href="#">
-                        <span class="com_rank rank1">1위</span>
-                        <img src="img/img-index/rank_book01.jpg" alt="1위 트렌드코리아2022">
-                        <span class="book_title">트렌드코리아2022</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="com_rank rank2">2위</span>
-                        <img src="img/img-index/rank_book02.jpg" alt="2위 거꾸로 읽는 세계사">
-                        <span class="book_title">거꾸로 읽는 세계사</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="com_rank rank3">3위</span>
-                        <img src="img/img-index/rank_book03.jpg" alt="3위 해커스토익 기출 보카">
-                        <span class="book_title">해커스토익 기출 보카</span>
-                        </a>
-                    </li>
-                <li>
-                    <a href="#">
-                        <img src="img/img-index/rank_book04.jpg" alt="4위 흔한 남매 만화책">
-                        <span class="book_title">흔한 남매</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/img-index/rank_book05.jpg" alt="5위 오은영의 화해">
-                        <span class="book_title">오은영의 화해</span>
-                    </a>
-                </li>  
-                <li>
-                    <a href="#">
-                        <img src="img/img-index/rank_book06.jpg" alt="6위 부자아빠 20주년 특별 기념판">
-                        <span class="book_title">부자아빠 <br>20주년 특별 기념판</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/img-index/rank_book07.jpg" alt="7위 달러쿠트 꿈 백화점">
-                        <span class="book_title">달러쿠트 꿈 백화점</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/img-index/rank_book08.jpg" alt="8위 소크라테스 익스프레스">
-                        <span class="book_title">소크라테스 익스프레스</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/img-index/rank_book09.jpg" alt="9위 NFT 레볼루션">
-                        <span class="book_title">NFT 레볼루션</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/img-index/rank_book10.jpg" alt="10위 미드나잇 라이브러리">
-                        <span class="book_title">미드나잇 라이브러리</span>
-                    </a>
-                </li>
-            </ol>
-        </div>
-    </section>
-    <!--알라디너tv-->
-    <section id="aladin_tv">
-        <div class="inner">
-            <div class="aladin_tv_title clear">
-                <h2 class="section_title">알라디너TV</h2>
-                <a href="#" class="viewmore"><span>더보기</span></a>
-            </div>
-            <div class="aladin_tv_contents clear">
-                <div>
-                    <h5><span>HOT</span> 인기 알라디너</h5>
-                    <a href="#">
-                        <img src="img/img-index/youtube01.jpg" alt="marie의 1월 언박싱 9권의 책과 굿즈들">
-                        <span class="book_title">| 1월 언박싱 | 9권의 책과 굿즈들</span>
-                        <span>marie<br>
-                        동영상 50 조회수 61482</span>
-                    </a>
-                </div>
-                <div>
-                    <h5><span>LIVE </span>TV</h5>
-                    <a href="#">
-                        <img src="img/img-index/youtube02.jpg" alt="알라디너TV의 겨울날의 SF를 좋아하세요? 이경희X심너울 북토크 라이브">
-                        <span class="book_title">겨울날의 SF를 좋아하세요? 이경희X심너울 북토크 라이브</span>
-                        <span>알라디너TV<br>
-                        1월 25일(화) 저녁 7시 LIVE 예정</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="divide">구분선</div>
-    <!--1월의 알라딘-->
-    <section id="event">
-        <div class="inner">
-            <h2  class="section_title"><span>1</span><span>월</span>의 알라딘</h2>
-            <div class="swiper mySwiper">
-                <ul class="month_event clear swiper-wrapper">
-                    <li class="swiper-slide">
-                        <a href="#"><span>금장 노트</span></a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#"><span>적립금<br> 꼭 챙기세요!</span></a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#"><span>이 시간 굿즈<br> 총 집합</span></a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#"><span>알라딘마켓!<br> 행운의 룰렛</span></a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#"><span>현미 눈 찜질팩</span></a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#"><span>2022 참고서</span></a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#"><span>외국도서!<br> 느리게 읽기</span></a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#"><span>위즈덤하우스<br> e브랜드전</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- 퀵메뉴 -->
-    <div class="quickmenu">
-        <ul>
-            <li class="blind"><a href="#" class="top">위로</a></li>
-            <li class="blind"><a href="#" class="down">아래로</a></li>
-            <li class="blind"><a href="#" class="cart">최근본 책</a>
-                <ol>
-                    <li><a href="#">책1</a></li>
-                    <li><a href="#">책2</a></li>
-                    <li><a href="#">책3</a></li>
-                </ol>
-            </li>
-        </ul>
-    </div>
-   <footer>
+    <footer>
         <div class="notice_area"> 
             <!--구분선을 위한 div-->
             <div class="inner clear">
@@ -758,31 +447,31 @@
                 <li><a href="#">About 알라딘</a></li>
             </ul>
         </div>
-        <!-- addr -->
-        <div class="inner addr">
-            <h3 class="blind footer_logo"><a href="#">푸터 로고</a></h3>
-            <address class="clear">
-                <p>(주)알라딘커뮤니케이션<br>
-                    대표이사 : 최우경<br>                                           
-                    FAX : 02-6913-2500<br>                                       
-                    사업자등록 : 201-81-23094<br>                           
-                    호스팅 제공자 : 알라딘커뮤니케이션<br>
-                    (본사)서울시 중구 서소문로 89-31 지도<br>
-                    (고객센터) 서울시 마포구 백범로 71 숨도빌딩 7층 ,<br class="ent"> FAX : 02-6926-2600
-                </p>
-                <p>
-                    고객정보보호 책입자 : 최우경<br>
-                    E-mail : privacy@aladin.co.kr<br>
-                    통신판매업신고 : 중고01520호
-                </p>
-                <p>1544-2514<br>
-                    <span>고객센터 일반문의(발신자 부담)</span>
-                </p>
-                <div class="blind">서비스가입확인 인증</div>
-            </address>
-        </div>
+       <!-- addr -->
+       <div class="inner addr">
+        <h3 class="blind footer_logo"><a href="#">푸터 로고</a></h3>
+        <address class=" clear">
+            <p>(주)알라딘커뮤니케이션<br>
+                대표이사 : 최우경<br>                                           
+                FAX : 02-6913-2500<br>                                       
+                사업자등록 : 201-81-23094<br>                           
+                호스팅 제공자 : 알라딘커뮤니케이션<br>
+                (본사)서울시 중구 서소문로 89-31 지도<br>
+                (고객센터) 서울시 마포구 백범로 71 숨도빌딩 7층 ,<br class="ent"> FAX : 02-6926-2600
+            </p>
+            <p>
+                고객정보보호 책입자 : 최우경<br>
+                E-mail : privacy@aladin.co.kr<br>
+                통신판매업신고 : 중고01520호
+            </p>
+            <p>1544-2514<br>
+                <span>고객센터 일반문의(발신자 부담)</span>
+            </p>
+            <div class="blind">서비스가입확인 인증</div>
+        </address>
+    </div>
     </footer>
-    <script src="js/index.js"></script>
     <script src="js/login_open.js"></script>
+
 </body>
 </html>

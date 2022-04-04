@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알라딘 로그인</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+
+    <script src="js/js_jq/jquery-3.3.1.min.js"></script>
+    <script src="js/login_js.js"></script>
+</head>
+<body>
+    <div class="login_inner">
+        <section id="login">
+            <h4 class="blind">알라딘 로고</h4>
+            <form name="login">
+                <input type="text" name="id" placeholder="아이디">
+                <input type="text" name="pw" placeholder="비밀번호">
+                <a href="#">로그인 상태 유지</a>
+                <p class="data_none id_alert">아이디를 입력해주세요.</p>
+                <p class="data_none pw_alert">비밀번호를 입력해주세요.</p>
+                <input type="submit" value="로그인">
+            </form>
+        </section>
+        <!-- 아이콘 로그인 -->
+        <div class="icon_wrap">
+            <h4>SNS계정으로 로그인</h4>
+            <ul class="icon">
+                <li>
+                    <a href="#">
+                        <img src="img/img-join/naver.png" alt="네이버 계정 로그인 아이콘">
+                        네이버
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/img-join/kakao.png" alt="카카오톡 계정 로그인 아이콘">
+                        카카오톡
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <img src="img/img-join/google.png" alt="구글 계정 로그인 아이콘">
+                    구글
+                </a>
+                </li>
+                    <li>
+                        <a href="#">
+                        <img src="img/img-join/twitter.png" alt="트위터 계정 로그인 아이콘">
+                        트위터
+                    </a>
+                </li>
+                    <li>
+                        <a href="#">
+                        <img src="img/img-join/samsungpass.png" alt="삼성패스 계정 로그인 아이콘">
+                        삼성pass
+                    </a>
+                </li>
+                    <li>
+                        <a href="#">
+                        <img src="img/img-join/apple.png" alt="애플 계정 로그인 아이콘">
+                        애플
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 아이디, 비밀번호 찾기, 회원가입 -->
+        <section id="serch_personal_data">
+            <a href="#">비밀번호 찾기</a>
+            <a href="#">아이디 찾기</a>
+            <a href="#">회원가입</a>
+        </section>
+    </div>
+</body>
+</html>

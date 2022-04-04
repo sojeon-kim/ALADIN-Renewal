@@ -69,7 +69,7 @@ section h2:not(#aladin_tv .section_title){
 }
 
 .search a{
-    background: url(../img/search.jpg) no-repeat;
+    background: url(../img/img-index/search.jpg) no-repeat;
     height: 100%;
     width: 40px;
     position: absolute;
@@ -101,17 +101,17 @@ section h2:not(#aladin_tv .section_title){
 }
 
 .rank1{
-    background: url(../img/rank01.png) no-repeat;
+    background: url(../img/img-index/rank01.png) no-repeat;
     
 
 }
 .rank2{
-    background: url(../img/rank02.png) no-repeat;
+    background: url(../img/img-index/rank02.png) no-repeat;
     position: absolute;
 
 }
 .rank3{
-    background: url(../img/rank03.png) no-repeat;
+    background: url(../img/img-index/rank03.png) no-repeat;
     position: absolute;
 
 }
@@ -123,12 +123,12 @@ section h2:not(#aladin_tv .section_title){
     height: 55px;
 }
 .swiper-button-prev:after{
-    background: url(../img/book_news_left_arrow_active.png) no-repeat center / cover;
+    background: url(../img/img-index/book_news_left_arrow_active.png) no-repeat center / cover;
     height: 100%;
     width: 100%;
 }
 .swiper-button-next:after{
-    background: url(../img/book_news_rihgt_arrow_active.png) no-repeat center / cover;
+    background: url(../img/img-index/book_news_rihgt_arrow_active.png) no-repeat center / cover;
     height: 100%;
     width: 100%;
 }
@@ -151,3 +151,68 @@ section h2:not(#aladin_tv .section_title){
     overflow: hidden;
 }
 
+/* 아이디, 비밀번호 빈칸일 경우 알림 문구 */
+.data_none{
+    display: none;
+    background: url(../img/img-login/alert.png) no-repeat 15px center #ffd2d2;
+    border: 1px solid #ff5e5e;
+    border-radius: 10px;
+    text-indent: 45px;
+    color: #ff5e5e;
+    margin: 10px 0 10px 10px;
+}
+/************************* join_froms의 함수 *************************/
+
+/* check_list */
+.check_list{
+    display: block;
+    background: url(../img/img-join/terms_checked.png) no-repeat;
+    background-position: 0 4px;
+    text-indent: 31px;
+    margin-bottom: 22px;
+}
+/* showContents */
+.showContents{
+    color: #b1b1b1;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 12px;
+}
+
+
+
+
+
+
+/**************** 태블릿 ****************/
+@media screen and (max-width:1024px){
+    /* 공통 */
+    section:not(#main_visual, #mv_btn){
+        margin-top: 60px;
+    }
+    section h2:not(#aladin_tv .section_title){
+        margin-bottom: 30px;
+    }
+    .book_title {
+        margin-top: 18px;
+    }
+}
+
+/***** 중간 단계 *****/
+
+@media screen and (max-width:760px){
+    /* 공통 */
+    .book_title{
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .book_sub{
+        display: none;
+    }
+    .section_title{
+        font-size: 20px;
+    }
+    section h2:not(#aladin_tv .section_title){
+        margin-bottom: 22px;
+    }
+}

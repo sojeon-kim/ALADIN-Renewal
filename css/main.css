@@ -24,6 +24,8 @@
     border: 1px solid #4f2987;
     background: initial;
     opacity: 1;
+    width: 10px;
+    height: 10px;
 }
 #main_visual .swiper-pagination-bullet-active{
     background: #4f2987;
@@ -227,6 +229,8 @@
     border: 1px solid #4f2987;
     background: initial;
     opacity: 1;
+    width: 10px;
+    height: 10px;
 }
 #recom_book .swiper-pagination-bullet-active{
     background: #4f2987;
@@ -247,10 +251,15 @@
 
 .btn_wrap #category a{
     position: relative;
-    margin: 0 5px;
+    margin: 0 20px;
     color: #7d7d7d;
 }
-
+.btn_wrap #category a:nth-child(1){
+    margin-left: 0;
+}
+.btn_wrap #category a:nth-last-child(1){
+    margin-right: 0;
+}
 .btn_wrap #category a::after{
     content: "";
     display: inline-block;
@@ -260,7 +269,7 @@
     height: 3px;
     position: absolute;
     top: 11px;
-    right: -10px;
+    right: -25px;
 }
 
 .btn_wrap #category a:last-child::after{
@@ -343,7 +352,7 @@
 }
 .aladin_tv_contents a::before{
     content: "";
-    background: url(../img/youtube_btn.png) no-repeat;
+    background: url(../img/img-index/youtube_btn.png) no-repeat;
     opacity: 0.8;
     width: 90px;
     height: 63px;
@@ -355,10 +364,6 @@
 
 
 /*1월의 알라딘*/
-#event{
-    border-bottom: 1px solid #b1b1b1;
-
-}
 #event h2 span{
     color: #4f2987;
 }
@@ -373,7 +378,7 @@
     text-align: center;
     width: calc(25% - 60px/4);
     height: 60px;
-    margin-right: 15px;
+    margin-right: 20px;
     position: relative;
     float: left;
     line-height: 60px;
@@ -384,28 +389,28 @@
     margin-right: 0;
 }
 .month_event li:nth-child(1) {
-    background: url(../img/event01.png) no-repeat center;
+    background: url(../img/img-index/event01.png) no-repeat center;
 }
 .month_event li:nth-child(2){
-    background: url(../img/event02.png) no-repeat  -17px -103px;
+    background: url(../img/img-index/event02.png) no-repeat  -17px -103px;
 }
 .month_event li:nth-child(3){
-    background: url(../img/event03.png) no-repeat center;
+    background: url(../img/img-index/event03.png) no-repeat center;
 }
 .month_event li:nth-child(4){
-    background: url(../img/event04.png) no-repeat center;
+    background: url(../img/img-index/event04.png) no-repeat center;
 }
 .month_event li:nth-child(5){
-    background: url(../img/event05.png) no-repeat center;
+    background: url(../img/img-index/event05.png) no-repeat center;
 }
 .month_event li:nth-child(6){
-    background: url(../img/event06.png) no-repeat center;
+    background: url(../img/img-index/event06.png) no-repeat center;
 }
 .month_event li:nth-child(7){
-    background: url(../img/event07.png) no-repeat  -13px -102px;
+    background: url(../img/img-index/event07.png) no-repeat  -13px -102px;
 }
 .month_event li:nth-child(8){
-    background: url(../img/event08.png) no-repeat center;
+    background: url(../img/img-index/event08.png) no-repeat center;
 }
 .month_event li a{
     display: block;
@@ -438,22 +443,577 @@
     margin-bottom: 5px;
 }
 .quickmenu .top{
-    background: url(../img/quickmenu_top.png) rgba(216, 216, 216) no-repeat center;
+    background: url(../img/img-index/quickmenu_top.png) rgba(216, 216, 216) no-repeat center;
 }
 .quickmenu .down{
-    background: url(../img/quickmenu_down.png) rgba(216, 216, 216) no-repeat center;
+    background: url(../img/img-index/quickmenu_down.png) rgba(216, 216, 216) no-repeat center;
 }
 .quickmenu .cart{
     display: block;
-    background: url(../img/cart.png) no-repeat center;
+    background: url(../img/img-index/cart.png) no-repeat center;
     width: 62px;
     height: 68px;
 }
 .quickmenu .cart+ ol{
+    display: none;
     width: 363px;
     height: 72px;
     background: #65c3d3;
     position: absolute;
     bottom:-5px;
     right: 75px;
+}
+/* 1920 -> 1290 ->  1024 ->  760 -> 412 */
+/***** 중간 단계 *****/
+@media screen and (max-width:1290px){
+    /* 화제의 책 소식 */
+    #book_news .swiper-slide{
+        padding: 0;
+    }
+    /* 추천책 */
+    #recom_book h2{
+        margin-left: 0;
+    }
+    /* top10 */
+    #top10 .inner{
+        padding: 0;
+    }
+   
+}
+
+
+
+/**************** 태블릿 ****************/
+@media screen and (max-width:1024px){  
+    /* 메인 비주얼 */
+    #main_visual > .inner{
+        position: relative;
+    }
+    .swiper-horizontal>.swiper-scrollbar{
+        bottom: 18px;
+        background: #9e9e9e;
+        border-radius: 0;
+    }
+    .swiper-scrollbar-drag{
+        background: #4f2987;
+        border-radius: 0;
+    }
+
+    /* 메인비주얼 하단 버튼 */
+    #mv_btn div{
+        height: 40px;
+    }
+    #mv_btn ul::before, #mv_btn ul::after{
+        content: '';
+        display: block;
+        position: absolute;
+        /* border: 1px solid #4f2987; */
+        height: 2px;
+        background: #4f2987;
+    }
+    #mv_btn ul::before{
+        width: calc(50% - 321px); /*550에서 -8(-2를 4번한 값)의 반인 271px*/
+        left: 0;
+    }
+    #mv_btn ul::after{
+        width: calc(50% - 319px); /*#mv_btn ul li에서 margin-left: -2px;한 만큼 after에서 -2만큼 더 빼주어야 함*/
+        right: 0;
+    }
+    #mv_btn ul li{
+        background-size: 130px 30px;
+        width: 130px;
+        height: 30px;
+        line-height: 26px;
+    }
+    #mv_btn ul li.active{
+        background-size: 130px 40px;
+        width: 130px;
+        height: 40px;
+        flex-wrap: wrap; /* 412화면에서 글씨 잘리는거 해결*/
+    }
+
+    /* 쿠폰 */
+    #coupon .inner{
+        display: flex;
+        justify-content: center;
+    }
+    #coupon .inner a{
+        height: 100px;
+        margin-right: 7vw;
+    }
+    #coupon .inner a img{
+        margin: 8px 0;
+    }
+    #coupon .inner a p{
+        display: block;
+        line-height: 1.25;
+        margin-left: 0;
+    }
+    #coupon .inner a p br{
+        display: block;
+    }
+
+    /* 화제의 책 소식 */
+    #book_news h2{
+        padding-left: 0;
+    }
+    #book_news .swiper-slide{
+        background: #65c3d3;
+        border-radius: 30px;
+        height: auto;
+        padding: 2.6vw 5vw;
+    }
+    #book_news a{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #book_news .txt{
+        width: auto;
+    }
+    #book_news .txt p:first-child{
+        font-size: 17px;
+        padding-top: 20px;
+    }
+    #book_news .txt p:first-child br{
+        display: none;
+    }
+    #book_news .txt p:last-child{
+        font-size: 16px;
+        padding-top: 20px;
+    }
+    #book_news .txt p:last-child br{
+        display: none;
+    }
+    #book_news img{
+        width: 100%;
+    }
+    #book_news .swiper-slide-active{
+        z-index: 1;
+        /* height: 593px; */
+    }
+    /* 추천책 */
+    #recom_book .swiper{
+        margin: 0;
+    }
+    /* 1024에서 화살표 버튼 안보임 */
+    .swiper-button-next:after, .swiper-button-prev:after{
+        display: none;
+    }
+
+    /* top10 */
+    .top1to10 li{
+        width: calc(25% - 201px/4);
+    }
+    .top1to10 li, .top1to10 li:nth-child(5){
+        margin-right: 66px;
+    }
+    .top1to10 li:last-child,.top1to10 li:nth-last-child(2){
+        display: none;
+    }
+    .top1to10 li:nth-child(1),.top1to10 li:nth-child(5){
+        margin-left: 0;
+    }
+    .top1to10 li:nth-child(4),.top1to10 li:nth-child(8){
+        margin-right: 0;
+    }
+    
+    /* 알라디너tv */
+    .aladin_tv_title{
+        margin-bottom: 30px;
+    }
+    .aladin_tv_contents a::before{
+        background-size:  68px 47px;
+        width: 68px;
+        height: 47px;
+    }
+    /* divide */
+    .divide{
+        margin-top: 60px;
+    }
+    /* 퀵메뉴 */
+    .quickmenu{
+        top: initial;
+        bottom: 28%;
+    }
+    .quickmenu .top, .quickmenu .down{
+        width:47px;
+        height: 40px;
+        margin: 5px auto;
+    }
+    .quickmenu .cart{
+        background-size: 54px 59px;
+        width: 54px;
+        height: 59px;
+    }
+    .quickmenu .cart+ ol{
+        height: 59px;
+        bottom: -3px;
+    }
+}
+
+
+/***** 중간 단계 *****/
+
+@media screen and (max-width:760px){
+    /* 메인 비주얼 */
+    #main_visual{
+        display: flex;
+        flex-direction: column-reverse;
+        border-bottom: 2px solid #4f2987;
+        border-radius: 0 0 30px 30px;
+    }   
+    #main_visual .mv{
+        padding: 27px 0 60px;
+    }
+
+    /* 메인 비주얼 하단 버튼 */
+    #mv_btn{
+        border: 0;
+        margin-top: 28px;
+    }     
+    #mv_btn ul{
+        overflow: initial;
+    }
+    #mv_btn ul::before, #mv_btn ul::after{
+        display: none;
+    }
+    #mv_btn ul li{
+        border: 0;
+        margin-top: 0;
+
+    }
+    #mv_btn ul li.active a{
+        border-bottom: 2px solid #0b1117;
+        padding: 0 10px;
+    }
+
+    /*사은품*/
+    #main_visual .mv> li .gift{
+        top: 55%;
+      /* 450px에서 찌그러지는건 li or a의 너비를 고정하면 될것 같은뎅... */
+    }
+    #main_visual .mv> li .gift span{
+        padding: 5px 2.631vw;
+    }
+    #main_visual .mv>li .gift .gift_img{
+        padding: 4px 0 0 0;
+    }
+    #main_visual .mv>li .gift .gift_img img{
+        height: 50px;
+    }
+
+    /* 쿠폰 */
+    #coupon .inner a p{
+        font-size: 2.2vw;
+    }
+
+    /* 화제의 책 소식 */
+    #book_news .swiper{
+        height: 70.6315vw; /*얼추 잡아준 높이*/
+    }
+    #book_news .swiper-slide{
+        background: none;
+        padding: 0;
+        
+    }
+    #book_news .txt{
+        position: absolute;
+        background: #fff;
+        border-radius: 0 0 15px 15px;
+        clear: both;
+        padding: 20px 15px;
+    }
+    #book_news .txt p:first-child{
+        padding-top: 0;
+    }
+    #book_news img{
+        border-radius: 15px;
+        box-shadow: 0 20px 15px 0 gray;
+    }
+
+    /* 추천책 */
+    #recom_book .swiper-slide{
+        border: none;
+    }
+    #recom_book .swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom: -11px;
+    }
+
+    /* top10 */
+    #top10 .section_title{
+        background: url(../img/img-index/viewmore_arrow.png) no-repeat center right;
+        background-size: 12px 24px;
+        cursor: pointer;
+    }
+    .btn_wrap .viewmore{
+        display: none;
+    }
+    .top1to10 li,.top1to10 li:nth-child(5){
+        margin-right: 67px;
+    }
+    
+    /* 알라디너tv */
+    .aladin_tv_contents a .book_title+span{
+        font-size: 14px;
+    }
+    .aladin_tv_title{
+        background: url(../img/img-index/viewmore_arrow.png) no-repeat center right;
+        background-size: 12px 24px;
+        cursor: pointer;
+        margin-bottom: 22px;
+
+    }
+    .aladin_tv_title .viewmore{
+        display: none;
+    }
+
+    /* 1월의 알라딘 */
+    .month_event li{
+        margin-bottom: 63px;
+        background-position: center;
+        border-radius: 16px;
+
+    }
+    .month_event li:nth-child(1){
+        background-position: 0;
+        background-size: cover;
+    }
+    .month_event li:nth-child(2){
+        background-position: 0;
+        background-size: cover;
+    }
+    .month_event li:nth-child(3){
+        background-size: cover;
+    }
+    .month_event li:nth-child(4){
+        background-position: -70px -88px;
+    }
+    .month_event li:nth-child(5){
+        background-size: cover;
+    }
+    .month_event li:nth-child(6){
+        background-size: cover;
+    }
+    .month_event li:nth-child(7){
+        background-position: 0;
+        background-size: cover;
+    }
+    .month_event li:nth-child(8){
+        background-size: cover;
+    }
+    .month_event li a{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 30px;
+        left: 0;
+        top: 0;
+    }
+    .month_event li span{
+        color: #0b1117;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        line-height: 1.21;
+        font-size: 2vw;
+    }
+
+    /* 퀵메뉴 */
+    .quickmenu ul li:nth-child(2){
+        display: none;
+    }
+    
+    .quickmenu ul li:nth-child(3) a{
+        background-size: 47px 51px;
+        width: 47px;
+        height: 51px;
+    }
+    .quickmenu .cart+ ol{
+        display: none;
+    }
+}
+
+@media screen and (max-width:665px){
+    /* 메인비주얼 하단 버튼 */
+    #mv_btn ul{
+        justify-content: start;
+    }
+
+    /* 화제의 책 p태그 */
+    #book_news .txt p:last-child{
+        display: none;
+    }
+
+    /* top10 */    
+    .rank3{
+        display: none;
+    }
+    .top1to10 li, .top1to10 li:nth-child(5) {
+        margin-right: 0;
+    } /*이전 화면까지 적용되던 margin-right 제거*/
+    .top1to10 li{
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 13px 25px;
+    }
+    .top1to10 li:nth-child(-n+5) a span{
+        margin-bottom: 0;
+    }
+    .top1to10 li:nth-child(1), .top1to10 li:nth-child(2){
+        float: left;
+        width: calc(50% - 10px/2);
+        margin-bottom: 10px;
+    } 
+    .top1to10 li:nth-child(1){
+        margin-right: 10px;
+    }
+    .top1to10 li:nth-child(3){
+        clear: both;
+    }
+    .top1to10 li:nth-child(3), .top1to10 li:nth-child(4), .top1to10 li:nth-child(5){
+        float: none;
+        width: 100%;
+        margin-top: 10px;
+        text-align: left;
+    }
+    .top1to10 li:nth-child(3) a, .top1to10 li:nth-child(4) a, .top1to10 li:nth-child(5) a{
+        /* display: flex;
+        width: 80%; */
+        position: relative;
+    }
+    .top1to10 li:nth-child(3) a .book_title::before,.top1to10 li:nth-child(4) a .book_title::before, .top1to10 li:nth-child(5) a .book_title::before{
+        display: block;
+        width: 30px;
+        height: 17px;
+        background: #ffe016;
+        text-align:center;
+        line-height: 17px;
+    }
+    .top1to10 li:nth-child(3) a .book_title::before{
+        content: "3";
+    }
+    .top1to10 li:nth-child(4) a .book_title::before{
+        content: "4";
+    }
+    .top1to10 li:nth-child(5) a .book_title::before{
+        content: "5";
+    }
+    .top1to10 li:nth-child(3) a .book_title,.top1to10 li:nth-child(4) a .book_title,.top1to10 li:nth-child(5) a .book_title{
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0;
+    }
+    .top1to10 li:nth-child(3) a img,.top1to10 li:nth-child(4) a img,.top1to10 li:nth-child(5) a img{
+        width: 30%;
+    }
+    .top1to10 li:nth-last-child(3),.top1to10 li:nth-last-child(4),.top1to10 li:nth-last-child(5){
+        display: none;
+    }
+
+    /* 알라디너tv */
+    .aladin_tv_contents div{
+        float: none;
+        width: 100%;
+    }
+    .aladin_tv_contents div:last-child{
+        margin-top: 17px;
+    }
+    .aladin_tv_contents div h5{
+        display: none;
+    }
+
+    /* 1월의 알라딘 */
+    .month_event li span{
+        font-size: max(2.40601vw,12px);
+    }
+    .month_event li span br{
+        display: block;
+    }
+   
+    /* 퀵메뉴 */
+    .quickmenu{
+        bottom: 14%;
+        right: 5%;
+    }
+}
+
+/**************** 모바일 ****************/
+@media screen and (max-width:412px){
+    /* 쿠폰 */
+    #coupon .inner{
+        width: 100%;
+    }
+    #coupon .inner a{
+        width: 128px;
+        border-radius: 0;
+    }
+    #coupon .inner a p{
+        font-size: 3.398vw; /*14px*/
+    }
+
+    /*사은품*/
+     #main_visual .mv> li .gift{
+        top: 55%;
+        left: 60%
+    }
+    
+    /* 화제의 책 소식 */
+    #book_news .txt p:first-child{
+        font-size: 14px;
+    }
+
+    /* top10 */
+    .btn_wrap #category a{
+        margin: 0 5px;
+    }
+    .btn_wrap #category a::after{
+        right: -10px;
+    }
+    #top10 .section_title{
+        background-size: 8px 16px;
+    }
+    .top1to10 li:nth-child(1){
+        margin-right: 7px;
+    }
+    .top1to10 li:nth-child(1), .top1to10 li:nth-child(2){
+        width: calc(50% - 7px/2);
+    }
+    .top1to10 li:nth-child(3) a img,.top1to10 li:nth-child(4) a img,.top1to10 li:nth-child(5) a img{
+        width: 25%;
+    }
+    .top1to10 li:nth-child(3) a .book_title, .top1to10 li:nth-child(4) a .book_title, .top1to10 li:nth-child(5) a .book_title{
+        left: 30%;
+    }
+
+    /* 알라디더tv */
+    .aladin_tv_title{
+        background-size: 8px 16px;
+    }
+    .aladin_tv_contents a::before{
+        width: 50px;
+        height: 35px;
+        background-size: 50px 35px;
+    }
+
+    /* 1월의 알라딘 */
+    .month_event{
+        flex-wrap: nowrap;
+    }
+    .month_event li{
+        width: 60px;
+        border-radius: 30px;
+        margin-right: 40px;
+    }
+    .month_event li span{
+        font-size: 14px;
+    }
+    .month_event li::after{
+        border-radius: 30px;
+    }
+    .month_event li span{
+        width: 100px;
+    }
 }
