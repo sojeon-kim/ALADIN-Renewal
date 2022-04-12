@@ -44,14 +44,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;
     font-weight: 700;
 }
 
-/*요소들 위쪾 여백*/
-section:not(#main_visual, #mv_btn){
-    margin-top: 80px;
-}
-/* h2 아래 여백 */
-section h2:not(#aladin_tv .section_title){
-    margin-bottom: 40px;
-}
+
 /*글씨 안보이게*/
 .blind{
     text-indent: -9999px;
@@ -166,8 +159,7 @@ section h2:not(#aladin_tv .section_title){
 /* check_list */
 .check_list{
     display: block;
-    background: url(../img/img-join/terms_checked.png) no-repeat;
-    background-position: 0 4px;
+    background: url(../img/img-join/not_checked.png) no-repeat left center;
     text-indent: 31px;
     margin-bottom: 22px;
 }
@@ -178,7 +170,12 @@ section h2:not(#aladin_tv .section_title){
     font-weight: 400;
     margin-left: 12px;
 }
-
+.on{
+    display: block;
+}
+.close{
+    display: none;
+}
 
 
 
@@ -186,13 +183,7 @@ section h2:not(#aladin_tv .section_title){
 
 /**************** 태블릿 ****************/
 @media screen and (max-width:1024px){
-    /* 공통 */
-    section:not(#main_visual, #mv_btn){
-        margin-top: 60px;
-    }
-    section h2:not(#aladin_tv .section_title){
-        margin-bottom: 30px;
-    }
+    
     .book_title {
         margin-top: 18px;
     }
@@ -209,10 +200,5 @@ section h2:not(#aladin_tv .section_title){
     .book_sub{
         display: none;
     }
-    .section_title{
-        font-size: 20px;
-    }
-    section h2:not(#aladin_tv .section_title){
-        margin-bottom: 22px;
-    }
+    
 }

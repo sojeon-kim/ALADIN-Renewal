@@ -6,6 +6,21 @@ header{
     z-index: 9999;
     position: relative;
 }
+header.scroll{
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    height: 72px;
+}
+header.scroll nav{
+    display: none;
+}
+header.scroll .topside_wrap h1{
+    margin-top: 0;
+}
+header.scroll .topside_wrap .search{
+    margin-top: 5px;
+}
 header .inner{
     height: 100%;
     position: relative;
@@ -66,9 +81,6 @@ nav{
     width: 100%;
     height: 38px;
     line-height: 38px;
-    /* 아래 두줄은 nav를 header바닥 맞추기 위해 사용 */
-    /* position: absolute;
-    bottom: 0; */
     margin-top: 13px;
 }
 nav .main_manu{
@@ -77,26 +89,18 @@ nav .main_manu{
 }
 nav .main_manu > li{
     font-weight: 700;
-    float: left;/*옆으로 나란히 나란히~*/
+    float: left;
     width: auto !important;
     position: static;
 }
 nav .main_manu > li:nth-last-child(1), nav .main_manu > li:nth-last-child(2), nav .main_manu > li:nth-last-child(3) {
     float: right;
 }
-nav .main_manu > li:hover{
-    background: #4f2987 url(../img/img-index/menu_arrow.png) no-repeat center 100%;
-}
+
 nav .main_manu > li> a{
     padding: 0 16px;
 }
-nav .main_manu > li:hover > a{
-    color: #fff8ff;
-}
 
-nav .main_manu > li:hover .sub_menu{
-    display: block;
-}
 nav .sub_menu{
     position: absolute;
     display: none;
@@ -135,7 +139,18 @@ nav .menu_flex .sec_depth{
 nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
     height: 100%;
 }
-
+/* 태블릿 크기 부터는 호버가 아닌 클릭으로! */
+@media screen and (min-width: 1025px){
+    nav .main_manu > li:hover{
+        background: #4f2987 url(../img/img-index/menu_arrow.png) no-repeat center 100%;
+    }
+    nav .main_manu > li:hover > a{
+        color: #fff8ff;
+    }
+    nav .main_manu > li:hover .sub_menu{
+        display: block;
+    }
+}
 @media screen and (max-width:1290px){
     /* 헤더 */
     .topside_wrap .search{
@@ -209,6 +224,12 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
         display: flex;
         justify-content: space-between;
     }
+    nav .main_manu > li.click{
+        background: #4f2987 url(../img/img-index/menu_arrow.png) no-repeat center 100%;
+    }
+    nav .main_manu > li.click > a{
+        color: #fff8ff;
+    }
     nav .main_manu > li:nth-child(1){
         order: 0;
     }nav .main_manu > li:nth-child(2){
@@ -233,18 +254,29 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
     nav .main_manu > li> a{
         padding: 0 5px;
     }
-    nav .main_manu > li:hover .sub_menu{
-        width: 100%;
-    }
-    nav .sub_menu{
+    nav .main_manu > li .sub_menu{
         left: 0;
+        width: 100%;
     }
 
 }
 /***** 중간 단계 *****/
 
 @media screen and (max-width:760px){
+    /* nav가 슬라이드로 열리면서 생기는 가로 스크롤 없애기 */
+    body{
+        overflow-x: hidden;
+    }
     /* 헤더 */
+    header{
+        overflow: hidden;
+    }
+    header.scroll nav{
+        display: block;
+    }
+    header.on{
+        overflow: visible;
+    }
     header .inner{
         width: auto;
     }
@@ -260,7 +292,6 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
     }
     .topside_wrap .search{
         margin: 10px 0 0 4vw;
-        /* 마진 탑 2px */
     }
     .topside_wrap .search input{
         width: 48.441vw;
@@ -273,7 +304,13 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
         position: absolute;
         right: 18px;
         top: 45%;
-        /* 탑 36px */
+        transition: all 0.3s;
+    }
+    .hamburger_btn.on{
+        height: 19px;
+        background: url(../img/img-index/x.png) no-repeat top center;
+        cursor: pointer;
+        z-index: 9;
     }
     .hamburger_btn span{
         display: block;
@@ -282,21 +319,28 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
         background: #4f2987;
         margin-bottom: 5px;
     }
+    .hamburger_btn.on span{
+        height: 0;
+    }
+   
     /* 네비게이션 */
-    nav {
-        display: none;
+    nav{
         background: #fff;
-        height: auto;
+        height: 100vh;
         position: absolute;
+        overflow: auto; /*햄버거 메뉴가 열렸을 때 스크롤이 안되는 것을 되도록 함*/
         top: 0;
-        z-index: 9999999;
+        right: -100%;
         margin-top: 0;
+        transition: all 0.3s; 
+    }
+    nav.on{
+        right: 0;
     }
     nav::before{
         content: '';
         display: block;
         height: 84px;
-        background: url(../img/img-index/x.png) no-repeat 97% center;
         cursor: pointer;
     }
     nav .main_manu{
@@ -305,11 +349,12 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
     nav .main_manu > li{
         float: none;
     }
-    nav .main_manu > li:hover{
-        background: none;
+    nav .main_manu > li.click{
+        background: initial;
     }
-    nav .main_manu > li:hover > a{
+    nav .main_manu > li.click > a{
         color: initial;
+        border-bottom: 1px solid #7b7b7b;
     }
     nav .main_manu > li:nth-last-child(1), nav .main_manu > li:nth-last-child(2), nav .main_manu > li:nth-last-child(3){
         float: none;        
@@ -318,15 +363,16 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
         display: block;
         padding: 17px 18px;
         border-top: 1px solid #7b7b7b;
-        border-bottom: 1px solid #7b7b7b;
         background: url(../img/img-index/+.png) no-repeat 97% center;
+        border-bottom: 0;
     }
 
     nav .main_manu > li:nth-last-child(1)> a, nav .main_manu > li:nth-last-child(2)> a, nav .main_manu > li:nth-last-child(3)> a{
-        border-bottom: 0;
+        
+        background: none;
     }
-    nav .sub_menu{
-        display: block;
+    nav .main_manu > li .sub_menu{
+        display: none;
         position: static;
         border: none;
     }
@@ -366,6 +412,7 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
         display: block;
     }
     /****end******/
+
     /* 중고샵 */
     nav .main_manu > li:nth-child(5) .sub_menu .sec_depth:nth-child(2){
         height: 190px;
@@ -374,6 +421,7 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
     nav .swiper-wrapper{
         margin-left: 18px;
     }
+    
     /* 탑메뉴 -> 하단 바 */
     .top_menu{
         position: fixed;

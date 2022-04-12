@@ -1,3 +1,4 @@
+// 로그인 시 아이디, 비밀번호 입력 하지 않으면 뜨는 알람
 window.onload = function(){
     var login = document.login;
     login.id.focus();

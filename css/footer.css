@@ -54,7 +54,8 @@ footer h4{
 
 
 
-/* aside_area */
+/* 푸터 메뉴 aside_area */
+
 .aside_area{
     text-align: center;
     padding: 30px 200px;
@@ -103,6 +104,7 @@ footer .list_crop li:last-child a{
     height: 117px;
     width: 150px;
     display: inline-block;
+    vertical-align: top;
 }
 .footer_logo a{
     display: block;
@@ -110,42 +112,42 @@ footer .list_crop li:last-child a{
     background: url(../img/img-index/footer_logo.png) no-repeat;
 }
 address{
-    display: inline;
+    display: inline-block;
+    margin-left: 15px;
 }
-.addr p:nth-last-child(3), .addr p:nth-last-child(4){
-    position: absolute;
+.addr p:nth-child(2), .addr p:nth-child(1){
+    float: left;
     white-space: initial;
     font-weight: 300;
-    top: 34px;
 }
-.addr p:nth-last-child(4){
+.addr p:nth-child(1){
     left: 188px;
 }
-.addr p:nth-last-child(4) .ent{
+.addr p:nth-child(1) .ent{
     display: none;
 }
-.addr p:nth-last-child(3){
+.addr p:nth-child(2){
     left: 430px;
 }
-.addr p:nth-last-child(2){
-    float: right;
-    display: block;
+.addr p:nth-child(3){
+    position: absolute;
+    right: 0;
     font-size: 24px;
     font-weight: 500;
     text-align: center;
     margin-right: 20px;
 }
-.addr p:nth-last-child(2) span{
+.addr p:nth-child(3) span{
     font-size: 14px;
 }
-.addr div:nth-last-child(1){
+.addr div:nth-child(4){
     background: url(../img/img-index/footer_pc_img.jpg) no-repeat;
     background-size: 236px 35px;
     width: 236px;
     height: 35px;
     position: absolute;
     right: 0;
-    bottom: 57PX;
+    bottom: 43PX;
 }
 
 
@@ -173,16 +175,16 @@ address{
     .footer_logo a{
         background-size: 11.62109375vw 92px;
     }
-    .addr p:nth-last-child(4), .addr p:nth-last-child(3){
+    .addr p:nth-child(1), .addr p:nth-child(2){
         top: 24px;
         font-size: max(1.3671875vw, 12px);
     }
-    .addr p:nth-last-child(4){
+    .addr p:nth-child(1){
         left: 148px;
         left: 14.453125vw;
     }
-    .addr p:nth-last-child(3){
-        left: 387px;
+    .addr p:nth-child(2){
+        position: absolute;
         left: 37.79296875vw;
     }
 }
@@ -203,13 +205,10 @@ address{
         display: none;
     }
     
-    .addr p:nth-last-child(4){
-        left: 0;
-    }
-    .addr p:nth-last-child(3){
+    .addr p:nth-child(2){
         left: 30%;
     }
-    .addr div:nth-last-child(1){
+    .addr div:nth-child(4){
         bottom: 80PX;
     }
 
@@ -229,6 +228,7 @@ address{
     .notice_area, .notice_area .inner > div:nth-child(1){
         display: none;
     }
+    /* 푸터 메뉴 */
     .aside_area{
         text-align: left;
         padding: 0;
@@ -237,13 +237,23 @@ address{
         float: none;
         width: 100%;
     }
+    .aside_area div ul{
+        display: none;
+    }
+    .aside_area div ul.on{
+        display: block;
+    }
     footer .aside_area h4{
+        cursor: pointer;
         font-size: 16px;
         padding: 18px 0;
         margin: 0;
         border-top: 1px solid #7b7b7b;
-        border-bottom: 1px solid #7b7b7b;
         background: url(../img/img-index/+.png) no-repeat 97% center;
+    }
+    footer .aside_area h4.on{
+        background: url(../img/img-index/-.png) no-repeat 97% center;
+        border-bottom: 1px solid #7b7b7b;
     }
     .aside_area ul li{
         padding: 20px 0;
@@ -267,35 +277,40 @@ address{
         padding: 0;
         
     }
-    
-    .addr p:nth-last-child(2){
-        float: none;
+    address{
+        width: 100%;
+        margin-left: 0;
+    }
+    .addr p:nth-child(3){
+        position: static;
         text-align: left;
         border-bottom: 1px solid #7b7b7b;
         margin-right: 0;
         padding: 24px 0 24px 18px;
     }
-    .addr p:nth-last-child(2) span{
+    .addr p:nth-child(3) span{
         display: block;
     }
-    .addr p:nth-last-child(4), .addr p:nth-last-child(3) {
+    
+    .addr p:nth-child(1), .addr p:nth-child(2) {
         left: 0;
         font-size: 14px;
         width: 100%;
         padding-left: 18px;
     }
-    .addr p:nth-last-child(4){
+    .addr p:nth-child(1){
+        position: absolute;
         top: 115px;
     }
-    .addr p:nth-last-child(4) .ent{
+    .addr p:nth-child(1) .ent{
         display: block;
     }
-    .addr p:nth-last-child(3){
+    .addr p:nth-child(2){
         top: 295px;
         padding-bottom: 20px;
         border-bottom: 1px solid #7b7b7b;
     }
-    .addr div:nth-last-child(1){
+    .addr div:nth-child(4){
         background: url(../img/img-index/footer_img.jpg) no-repeat;
         background-size: 280px 61px;
         width: 280px;

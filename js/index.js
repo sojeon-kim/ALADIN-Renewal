@@ -1,5 +1,4 @@
-// 메인비주얼 책 표지 보이도록 하는 스크립트
-
+// 메인비주얼 섹션 : 화면 사이즈에 따라  책 표지 보이는 갯수 변경하는 스크립트
 var swiper = new Swiper(".mv_list .mySwiper", {
     spaceBetween: 15,
     pagination: {
@@ -26,7 +25,7 @@ var swiper = new Swiper(".mv_list .mySwiper", {
     },
 });
 
-// 메인비주얼 하단 버튼 스크립트
+// 메인비주얼 하단 버튼 섹션 : 기존 버튼 형태에서 665px에서 슬라이드 형태로 변경하는 스크립트
 var mvBtnmobile = undefined;
 function mvSwiper(){
     if($(window).width() <= 665 && mvBtnmobile == undefined){
@@ -42,13 +41,11 @@ function mvSwiper(){
     }
 }
 
-mvSwiper();
-
 $(window).on("resize", function(){
     mvSwiper();        
 });
 
-// 화제의 책 소식 스크립트
+// 화제의 책 소식 섹션 : 화면 크기에 따라 책 보이는 갯수 변경 및 보이는 형태 변경하는 스크립트
 var swiper = new Swiper("#book_news  .mySwiper", {
 
     centeredSlides: true,
@@ -80,9 +77,8 @@ var swiper = new Swiper("#book_news  .mySwiper", {
     },
 });
 
-// 추천 책 스크립트
+// 추천 책  섹션 : 화면 사이즈에 따라 보이는 책 갯수 변경하는 스크립트
 var swiper = new Swiper("#recom_book  .mySwiper", {
-    // slidesPerView: 5,
     spaceBetween: 20,
     navigation: {
         nextEl: "#recom_book .swiper-button-next",
@@ -108,7 +104,7 @@ var swiper = new Swiper("#recom_book  .mySwiper", {
 });
 
 
-// 주간 BEST TOP 10
+// 주간 BEST TOP 10 섹션 : 화면 크기에 따라 섹션 타이틀 값을 변경하는 스크립트
 $(window).on("resize", function(){
     
     var top10 = document.getElementById('top10');
@@ -118,14 +114,13 @@ $(window).on("resize", function(){
         sectionTitle.innerText = '주간 베스트';
     }else if($(window).width() > 760){
         sectionTitle.innerText = '주간 BEST TOP 10';
-    };
-
-    
+    };    
 });
 
 
 
-// 1월의 알라딘 (슬라이더 두께 17px이기 때문에 412-17=395로 범위 지정)
+// 1월의 알라딘 섹션 : 기존 버튼 형태에서 412px에서 슬라이드 형태로 변경하는 스크립트
+// 인터넷 슬라이더 두께 17px이기 때문에 412-17=395로 범위 지정
 var eventMobile = undefined;
 function eventSwiper(){
     if($(window).width() <= 395 && eventMobile == undefined){
@@ -150,32 +145,11 @@ function eventSwiper(){
     } 
 }
 
-eventSwiper();
-
 $(window).on("resize", function(){
     eventSwiper();        
 });
 
-// 퀵버튼
-// $(document).ready(function(){
-//     // hide = 1, show = 0
-//     var hide = 1;
-//     console.log(hide);
 
-//     $('.cart').click(function(){
-//         if(hide = 1){
-//             $('.cart+ol').show();
-//             hide = 0;
-//             console.log(hide);
-//         }else{
-//             $('.cart+ol').hide();
-//             hide = 1;
-//             console.log(hide);
-//         }
-        
-//     })
-   
-// });
 
 
     

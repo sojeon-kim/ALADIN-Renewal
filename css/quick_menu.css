@@ -1,0 +1,83 @@
+/* 퀵메뉴 */
+.quickmenu{
+    right: 2%;
+    top: calc(135px + 50px);
+    position: fixed;
+    z-index: 999;
+    transition: all 0.3s;
+}
+.quickmenu.on{
+    top: 200px;
+}
+.quickmenu .top, .quickmenu .down{
+    width: 60px;
+    height: 50px;
+    display: block;
+    margin-bottom: 5px;
+}
+.quickmenu .top{
+    background: url(../img/img-index/quickmenu_top.png) rgba(216, 216, 216) no-repeat center;
+}
+.quickmenu .down{
+    background: url(../img/img-index/quickmenu_down.png) rgba(216, 216, 216) no-repeat center;
+}
+.quickmenu .cart{
+    display: block;
+    background: url(../img/img-index/cart.png) no-repeat center;
+    width: 62px;
+    height: 68px;
+}
+.quickmenu .cart+ ol{
+    display: none;
+    width: 363px; /*제이쿼리에서 너비 줌*/
+    height: 72px;
+    background: #65c3d3;
+    position: absolute;
+    bottom:-5px;
+    right: 75px;
+}
+
+
+/**************** 태블릿 ****************/
+@media screen and (max-width:1024px){  
+      /* 퀵메뉴 */
+    .quickmenu{
+        top: initial;
+        bottom: 50px;
+        transition: all 0.3s;
+    }
+    .quickmenu.on{
+        top: initial;
+        bottom: 28%;
+    }
+    .quickmenu .top, .quickmenu .down{
+        width:47px;
+        height: 40px;
+        margin: 5px auto;
+    }
+    .quickmenu .cart{
+        background-size: 54px 59px;
+        width: 54px;
+        height: 59px;
+    }
+    .quickmenu .cart+ ol{
+        height: 59px;
+        bottom: -3px;
+    }
+}
+/* 중간단계 */
+@media screen and (max-width:760px){
+     /* 퀵메뉴 */
+     .quickmenu ul li:nth-child(2){
+        display: none;
+    }
+    
+    .quickmenu ul li:nth-child(3) a{
+        background-size: 47px 51px;
+        width: 47px;
+        height: 51px;
+    }
+    .quickmenu .cart+ ol{
+        display: none;
+    }
+}

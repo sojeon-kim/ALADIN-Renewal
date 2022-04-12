@@ -2,7 +2,7 @@
 .join_from_inner{
     max-width: 878px;
     width: calc(100% - 36px);
-    margin: 0 auto;
+    margin: 70px auto;
 }
 section h4{
     font-size: 20px;
@@ -34,7 +34,8 @@ section h4{
     background-position: 236px 9px;
 }
 .checked{
-    background-position: 0 -20px;
+    background: url(../img/img-join/checked.png) no-repeat left center;
+
 }
 /* 선택 동의항목 */
 section:nth-child(2) p{
@@ -109,7 +110,7 @@ form div:last-child{
     background: #65c3d3;
     color: #fff8ff;
     border: 0;
-    margin: 0 0 65px 53px;
+    margin: 0 0 0 53px;
 }
 
 
