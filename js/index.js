@@ -149,7 +149,26 @@ $(window).on("resize", function(){
     eventSwiper();        
 });
 
+//pc형 홈페이지 열면 뜨는 레이어 팝업 창
+$(document).ready(function(){
+    if($(window).width() >1024){
+        var dim = '<div class="dim"></div>';
 
+        $('#pop_up').before(dim).fadeIn();
+        $('body').css('overflow', 'hidden');
+
+        // 닫기 버튼
+        $('.close_btn').click(function(event){
+            $('#pop_up').fadeOut()
+            $('.dim').removeClass();
+            event.preventDefault();
+            event.stopPropagation();
+            $('body').css('overflow', 'auto');
+
+        });
+    };
+    
+});
 
 
     

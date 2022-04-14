@@ -263,10 +263,6 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
 /***** 중간 단계 *****/
 
 @media screen and (max-width:760px){
-    /* nav가 슬라이드로 열리면서 생기는 가로 스크롤 없애기 */
-    body{
-        overflow-x: hidden;
-    }
     /* 헤더 */
     header{
         overflow: hidden;
@@ -306,12 +302,12 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
         top: 45%;
         transition: all 0.3s;
     }
-    .hamburger_btn.on{
+    /* .hamburger_btn.on{
         height: 19px;
         background: url(../img/img-index/x.png) no-repeat top center;
         cursor: pointer;
         z-index: 9;
-    }
+    } */
     .hamburger_btn span{
         display: block;
         width: 20px;
@@ -329,7 +325,7 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
         height: 100vh;
         position: absolute;
         overflow: auto; /*햄버거 메뉴가 열렸을 때 스크롤이 안되는 것을 되도록 함*/
-        top: 0;
+        top: 100%;
         right: -100%;
         margin-top: 0;
         transition: all 0.3s; 
@@ -337,17 +333,30 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
     nav.on{
         right: 0;
     }
-    nav::before{
-        content: '';
-        display: block;
-        height: 84px;
-        cursor: pointer;
+    .x_btn{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background: #fff;
+        width: 100%;
+        transition: 0.3s;
+        border-bottom: 1px solid #7b7b7b;
     }
+    .x_btn img{
+        position: absolute;
+        right: 35px;
+        top: 45%;
+    }
+    
     nav .main_manu{
         display: block;
     }
     nav .main_manu > li{
         float: none;
+        border-top: 1px solid #7b7b7b;
+    }
+    nav .main_manu > li:first-child{
+        border-top: 0;
     }
     nav .main_manu > li.click{
         background: initial;
@@ -362,7 +371,6 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
     nav .main_manu > li> a{
         display: block;
         padding: 17px 18px;
-        border-top: 1px solid #7b7b7b;
         background: url(../img/img-index/+.png) no-repeat 97% center;
         border-bottom: 0;
     }
@@ -376,6 +384,7 @@ nav .menu_flex .sec_depth:nth-child(1), nav .menu_flex .sec_depth:nth-child(2){
         position: static;
         border: none;
     }
+    
     nav .sub_menu .sec_depth{
         text-align: left;
         width: 48%;

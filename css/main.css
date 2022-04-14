@@ -3,7 +3,7 @@
     border: 1px solid cadetblue !important;
 } */
 /*요소들 위쪾 여백*/
-section:not(#main_visual, #mv_btn){
+section:not(#main_visual, #mv_btn, #pop_up){
     margin-top: 80px;
 }
 /* h2 아래 여백 */

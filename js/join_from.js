@@ -14,8 +14,9 @@ $(document).ready(function(){
     })
 
     // 약관 동의 버튼 체크 & 체크 해제 스크립트
-    $(".check_list").click(function(){
+    $(".check_list").click(function(event){
         $(this).toggleClass("checked");
+        event.preventDefault();
     })
     
 });

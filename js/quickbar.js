@@ -13,12 +13,14 @@ $(document).ready(function(){
     });
 
     // 맨 위로 버튼
-    $(".top").click(function(){
+    $(".top").click(function(event){
         $(window).scrollTop(0);
+        event.preventDefault();
     });
     // 맨 아래로 버튼
-    $(".down").click(function(){
+    $(".down").click(function(event){
         $(window).scrollTop($(document).height());
+        event.preventDefault();
     });
 
     // 최근에 본 제품 버튼
@@ -35,6 +37,7 @@ $(document).ready(function(){
         }
 
         event.stopPropagation(); //부모 이벤트 막아줌
+        event.preventDefault();
     })
 
     $("html").click(function(){
@@ -43,7 +46,7 @@ $(document).ready(function(){
     });
 
     // 최근에 본 제품 박스 화면 사이즈에 따라 박스 크기 변경 스크립트
-   $(window).resize(function(event){
+   $(window).resize(function(){
         if($(window).width() <= 540){
             $(".cart+ol").css("width", "150px");
         }else if($(window).width() > 540){

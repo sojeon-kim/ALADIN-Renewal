@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 로봇  -->
+    <meta name="robots" content="index, follow">
+    <!-- 메타태크 -->
+    <meta name="subject" content="알라딘 홈페이지 리뉴얼">
+    <meta name="generator" content="vs code, photoshop">
+    <meta name="author" content="sojeong">
+    <meta name="keywords" content="리뉴얼 이벤트, 신간 소개, 맞춤형 책 소개">
+    <meta name="description" content="알라딘 홈페이지 리뉴얼 입니다. 메인 페이지, 로그인 화면, 회원가입 화면, 상세페이지 제작 되어 있습니다.">
+    <!-- og -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="알라딘">
+    <meta property="og:description" content="알라딘 홈페이지 리뉴얼 입니다. 메인 페이지, 로그인 화면, 회원가입 화면, 상세페이지 제작 되어 있습니다.">
+    <meta property="og:image" content="http://grean098.dothome.co.kr/alradin/img/og.jpg">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
     <title>알라딘</title>
     <!--css링크-->
     <link
@@ -13,6 +30,9 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/js_jq/jquery-3.3.1.min.js"></script>
     <script src="js/nav_menu.js"></script>
+    <script src="js/login_open.js"></script>
+    <script src="js/quickbar.js"></script>
+    <script src="js/footer.js"></script>
 
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
@@ -20,6 +40,7 @@
     <link href="css/main.css" rel="stylesheet">  
     <link href="css/quick_menu.css" rel="stylesheet">  
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/popup.css" rel="stylesheet">
 
 </head>
 <body>
@@ -664,9 +685,9 @@
     <!-- 퀵메뉴 -->
     <div class="quickmenu">
         <ul>
-            <li class="blind"><a href="#none" class="top">위로</a></li>
-            <li class="blind"><a href="#none" class="down">아래로</a></li>
-            <li class="blind"><a href="#none" class="cart">최근본 책</a>
+            <li class="blind"><a href="#" class="top">위로</a></li>
+            <li class="blind"><a href="#" class="down">아래로</a></li>
+            <li class="blind"><a href="#" class="cart">최근본 책</a>
                 <ol>
                     <li><a href="#">책1</a></li>
                     <li><a href="#">책2</a></li>
@@ -675,7 +696,7 @@
             </li>
         </ul>
     </div>
-   <footer>
+     <footer>
         <div class="notice_area"> 
             <!--구분선을 위한 div-->
             <div class="inner clear">
@@ -771,10 +792,31 @@
                 <div class="blind">서비스가입확인 인증</div>
             </address>
         </div>
-   </footer>
+    </footer>
+    <section id="pop_up"> <!--a태그 넣기, 금요일 까지 제출-->
+        <a href="details_page.html" alt="홈페이지 리뉴얼 기념 응원 팝업창" class="popUp_inner">
+            <div>
+                <p class="title">홈페이지<br>
+                    리뉴얼 기념<br>
+                    응원글을 게시판에 쓰면<br>
+                    알라딘이 쏜다!
+                </p>
+                <p class="title sub">
+                    2022 한스 크리스티안<br>
+                    안데르센상 수상 작가<br>
+                    이수지의<br>
+                    '여름이 온다' 받아가세요!
+                </p>
+                <img src="img/pop-up/writer.png" alt="이수지 작가 사진">
+                <img src="img/pop-up/book_img.jpg" alt="여름이 온다 책 표지">
+            </div>
+            <p class="alret">***본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.</p>
+            <div>
+                <span href="#" alt="오늘하루 그만보기 버튼">오늘하루 그만보기</span>
+                <span href="#" alt="닫기 버튼" class="close_btn">닫기</span>
+            </div>
+        </a>
+    </section>
     <script src="js/index.js"></script>
-    <script src="js/login_open.js"></script>
-    <script src="js/quickbar.js"></script>
-    <script src="js/footer.js"></script>
 </body>
 </html>
