@@ -110,9 +110,9 @@ $(window).on("resize", function(){
     var top10 = document.getElementById('top10');
     var sectionTitle = top10.children[0].children[0];
 
-    if($(window).width() <= 760){
+    if($(window).width() <= 1024){
         sectionTitle.innerText = '주간 베스트';
-    }else if($(window).width() > 760){
+    }else if($(window).width() > 1024){
         sectionTitle.innerText = '주간 BEST TOP 10';
     };    
 });
@@ -166,8 +166,66 @@ $(document).ready(function(){
             $('body').css('overflow', 'auto');
 
         });
+
+        // 쿠키설정 => 서버에 올려서 테스트
+        // function setCookie(name, val, due){
+        //     let today = new Date();
+        //     today.setDate(today.getDate() + due);
+        //     document.cookie = name+"="+val+"; path=/; exprise=" + today.toGNTString() +";"
+        //     console.log(today);
+
+        // };
+        // 쿠키 가져오기
+        // var getCookie = function (cname) {
+        //     var name = cname + "=";
+        //     var ca = document.cookie.split(';');
+        //     for(var i=0; i<ca.length; i++) {
+        //         var c = ca[i];
+        //         while (c.charAt(0)==' ') c = c.substring(1);
+        //         if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+        //     }
+        //     return "";
+        // }
+
+        // function closeForAday(){
+            
+        //     setCookie('popup', 'done', 1 );
+
+        //     console.log(document.cookie);
+
+        //     $('#pop_up').fadeOut()
+        //     $('.dim').removeClass();
+        //     $('body').css('overflow', 'auto');  
+        // };
+
+        // $('#notToday').click(function(event){
+        //     event.preventDefault();
+        //         closeForAday();    
+        //         alert(document.cookie);
+        // });
+
+        //쿠키설정
+        var date = new Date();
+        date.setDate(date.getDate() + 1);
+        var setCookie = '';
+
+        function closeAday(){
+            $('#notToday').on('click', function(event){
+                event.preventDefault();
+                setCookie += 'popup=close;';
+                setCookie += 'expires=' + date;
+                console.log(setCookie);
+                document.cookie = setCookie;
+                console.log(document.cookie);
+                $('#pop_up').fadeOut()
+                $('.dim').removeClass();
+                event.stopPropagation();
+                $('body').css('overflow', 'auto');
+            });
+        };
+
+        closeAday();
     };
-    
 });
 
 

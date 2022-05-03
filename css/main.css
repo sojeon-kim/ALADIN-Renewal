@@ -25,6 +25,7 @@ section h2:not(#aladin_tv .section_title){
 #main_visual .mv a{
     display: block;
     position: relative;
+    border: 2px solid #4f2987; /* 상세페이지 제작 표시 보더 추가 */
 }
 #main_visual .mv a img{
     max-width: 100%;

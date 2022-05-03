@@ -80,6 +80,14 @@ section#join{
     border: 2px solid #4f2987;
     /* margin-right: 23px; */
 }
+/* 회원가입 폼 제작 표시 백그라운드 & 컬러 변경*/
+.user_select li:nth-child(1){
+    background: #4f2987;
+}
+.user_select li:nth-child(1) a{
+    color: #fff8ff;
+}
+
 .user_select li:hover{
     background: #4f2987;
 }

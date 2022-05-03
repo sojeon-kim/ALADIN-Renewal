@@ -75,4 +75,5 @@
 }
 .popUp_inner div:nth-child(3) span:last-child{
     margin-right: 0;
+    border: 2px solid #4f2987;
 }

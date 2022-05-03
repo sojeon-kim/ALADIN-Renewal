@@ -37,7 +37,7 @@ $(document).ready(function(){
         }
 
         event.stopPropagation(); //부모 이벤트 막아줌
-        event.preventDefault();
+        event.preventDefault(); //a의 동작 막아줌
     })
 
     $("html").click(function(){

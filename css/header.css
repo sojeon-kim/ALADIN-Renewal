@@ -62,6 +62,11 @@ header .inner{
     float: left;
     margin-right: 30px;
 }
+/* 로그인, 회원가입 홈페이지 제작한 것 표시 보더 */
+.top_menu li:nth-child(1), .top_menu li:nth-child(2){
+    border: 2px solid #4f2987;
+}
+
 .top_menu li:last-child{
     margin-right: 0;
 }
